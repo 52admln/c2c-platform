@@ -1,2 +1,186 @@
 @import "./common.css";
 
+.page {
+    margin-top: 10px;
+}
+
+.first-module {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+.category {
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    width: 240px;
+    font-size: 12px;
+    margin-top: -1px;
+}
+
+.category-list {
+    margin: 0;
+    padding: 0;
+}
+
+.list-item {
+    position: relative;
+    z-index: 192;
+    padding: 0 10px;
+}
+
+.main-cate {
+    border-top: 1px solid #f2f2f2;
+    overflow: hidden;
+    padding: 10px 0;
+    line-height: 24px;
+    margin-top: -1px;
+}
+
+.main-cate b {
+    display: inline-block;
+    vertical-align: top;
+    width: 23px;
+    height: 19px;
+    margin-right: 10px;
+}
+
+.main-cate.digit b {
+    background: url("../img/icon_1.png") no-repeat;
+
+    background-size: 19px 19px;
+}
+
+.main-cate.daily b {
+    background: url("../img/icon_2.png") no-repeat;
+    background-size: 19px 19px;
+
+}
+
+.main-cate.movie b {
+    background: url("../img/icon_3.png") no-repeat;
+
+    background-size: 19px 19px;
+}
+
+.main-cate.shoes b {
+    background: url("../img/icon_4.png") no-repeat;
+
+    background-size: 19px 19px;
+}
+
+.main-cate.watch b {
+    background: url("../img/icon_5.png") no-repeat;
+
+    background-size: 19px 19px;
+}
+
+.main-cate.book b {
+    background: url("../img/icon_6.png") no-repeat;
+
+    background-size: 19px 19px;
+}
+
+.main-cate a {
+    color: #333;
+}
+
+.main-cate a:hover {
+    color: #9dc91c;
+}
+
+.main-link {
+    margin-left: 8px;
+}
+
+.main-link a {
+    color: #979797;
+    font: 12px/1.5 arial;
+    white-space: nowrap;
+}
+
+.list-item:hover {
+    background: #f3f3f3;
+}
+
+.list-item-hover .extra-cate {
+    display: block;
+    position: absolute;
+    z-index: 194;
+    left: 238px;
+    top: 0;
+    overflow: hidden;
+    -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, .19);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .19);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=112, Color='#dfdfdf')";
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=112, Color='#dfdfdf')
+}
+
+.extra-cate {
+    display: none;
+    border: 1px solid #e8e8e8;
+    padding-left: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    width: 494px;
+    padding: 10px 20px;
+}
+
+.sub-cat-wrap {
+    width: 600px;
+    overflow: hidden
+}
+
+.sub-category {
+    width: 227px;
+    overflow: hidden;
+    float: left;
+    *display: inline;
+    *zoom: 1;
+    padding: 0 40px 27px 0
+}
+
+.sub-category dt {
+    line-height: 18px;
+    padding-left: 8px;
+    border-left: 3px solid #ffda44
+}
+
+.sub-category dt a {
+    color: #333
+}
+
+.sub-category dd {
+    border-bottom: 1px solid #e8e8e8;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 18px 0 7px;
+    _zoom: 1
+}
+
+.sub-category dd ul li {
+    float: left;
+    line-height: 14px;
+    height: 14px;
+    margin: 0 8px 10px 0
+}
+
+.sub-category dd a {
+    color: #8a8a8a;
+    font: 12px/1.5 arial
+}
+
+.sub-category dd a:hover {
+    color: #9dc91c
+}
+
+.index-slider {
+    width: 912px;
+    height: 264px;
+    border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
+    margin: 0 10px;
+}
+.slide {
+    height: 254px;
+}
+
