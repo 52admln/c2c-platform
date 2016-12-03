@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>用户注册</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/sign.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="container form-wrap">
+    <div class="js-alert">
+        <!-- 成功alert-success 失败:alert-warning 替换即可 -->
+        <div class="alert alert-success alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span
+                    class="sr-only">Close</span></button>
+            注册成功，请<strong><a href="signup.html">点击登录</a></strong>。
+        </div>
+    </div>
+    <form class="form-signin" id="signupForm" role="form" action="" method="post">
+        <h2 class="form-signin-heading">用户注册</h2>
+        <input type="text" name="username" class="form-control" placeholder="用户名" required autofocus>
+        <input type="password" id="password" name="password" class="form-control" placeholder="密码" required>
+        <input type="password" name="confirm_password" class="form-control" placeholder="重复密码" required>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">注册</button>
+        <button class="btn btn-default btn-lg btn-block" id="reset" type="reset">重置</button>
+    </form>
+    <p class="signTip">已有帐号，<a href="./signin.html">点击登录</a></p>
+
+</div> <!-- /container -->
+
+<script src="js/jquery.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.js"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>

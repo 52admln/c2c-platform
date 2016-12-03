@@ -1,0 +1,146 @@
+
+/* ------------
+ * common
+--------------- */
+body {
+    font-size: 14px;
+}
+ul,
+li,
+ol {
+    list-style: none;
+}
+.hidden {
+    display: none;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}
+
+/* ------------
+ * top
+--------------- */
+
+.top-nav {
+    width: 100%;
+    height: 35px;
+    background: #F5F5F5;
+    line-height: 34px;
+}
+.top-nav a {
+    color: #6C6C6C;
+    font-size: 12px;
+}
+.top-nav a:hover, .top-nav a:focus  {
+    color: #ffda44;
+    text-decoration: none;
+}
+.top-nav-inner {
+    width: 1190px;
+    height: 35px;
+    margin:0 auto;
+}
+
+.header {
+    position: relative;
+    height: 90px;
+    background-color: #ffda44;
+}
+.header-inner {
+    width: 1190px;
+    margin: 0 auto;
+}
+.header-logo {
+    width: 208px;
+    height: 80px;
+    background: url("https://img.alicdn.com/tps/i3/TB1ys1sHVXXXXcrXVXXL_ZfHFXX-208-46.png") 0 20px no-repeat;
+}
+.header-menu {
+    position: absolute;
+    top: 28px;
+    left: 250px;
+}
+.header-menu li {
+    display: inline;
+    line-height: 35px;
+    padding: 8px 0;
+    margin: 0 15px;
+    font-size: 15px;
+
+}
+.header-menu li.active {
+    border-bottom: 4px solid #000;
+}
+.header-menu li:hover {
+    border-bottom: 4px solid #000;
+}
+.header-menu a {
+    color: #000;
+    text-decoration: none;
+}
+
+.header-search {
+    position: absolute;
+    right: 65px;
+    top: 27px;
+    width: 222px;
+    height: 36px;
+    background-color: #333;
+}
+.input-search {
+    width: 184px;
+    height: 32px;
+    padding: 0 10px;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    font-size: 13px;
+}
+.btn-search {
+    display: block;
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    background-color: #333;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: 0;
+}
+
+.page {
+    height:800px;
+}
+.footer {
+    padding: 30px 0;
+    background-color: #333;
+}
+.footer p {
+    color: #ffffff;
+    text-align: center;
+}
+/* ------------
+ * bottom
+--------------- */
