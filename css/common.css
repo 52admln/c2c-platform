@@ -4,10 +4,13 @@
 --------------- */
 body {
     font-size: 14px;
+    min-width: 1190px;
 }
 ul,
 li,
 ol {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 .hidden {
@@ -68,7 +71,7 @@ ol {
 .header-logo {
     width: 208px;
     height: 80px;
-    background: url("https://img.alicdn.com/tps/i3/TB1ys1sHVXXXXcrXVXXL_ZfHFXX-208-46.png") 0 20px no-repeat;
+    background: url("../img/logo.png") 0 20px no-repeat;
 }
 .header-menu {
     position: absolute;
@@ -96,7 +99,7 @@ ol {
 
 .header-search {
     position: absolute;
-    right: 65px;
+    right: 35px;
     top: 27px;
     width: 222px;
     height: 36px;
@@ -131,7 +134,7 @@ ol {
 }
 
 .page {
-    height:800px;
+    height:auto;
 }
 .footer {
     padding: 30px 0;
