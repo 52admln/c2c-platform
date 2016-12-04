@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>发布商品</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/publish.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="top-nav cf">
+    <div class="top-nav-inner">
+        <div class="top-nav-l fl">
+            大学生 C2C 交易平台
+        </div>
+        <div class="top-nav-r fr">
+            <!--通过hidden来控制显示,登录后显示第二个-->
+            <div class="not-login hidden">
+                <a class="active" href="#">亲,请登录</a>
+                <a href="#">免费注册</a>
+                <a href="#">个人中心</a>
+            </div>
+            <div class="log-in">
+                <a class="active" href="#">显示用户名</a>
+                <a href="#">已发布商品</a>
+                <a href="#">个人中心</a>
+                <!--有管理员权限时,将hidden类名去除-->
+                <a href="#" class="hidden">管理中心</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header">
+    <div class="header-inner cf">
+        <div class="header-logo fl"></div>
+        <div class="header-menu fl">
+            <ul>
+                <li class=""><a href="#">首页</a></li>
+                <li class=""><a href="#">二手商品</a></li>
+                <li class=""><a href="#">个人中心</a></li>
+                <li class="active"><a href="#">发布商品</a></li>
+            </ul>
+        </div>
+        <div class="header-search fr">
+            <form method="get" action="" name="search">
+                <input class="input-search" id="HeaderSearchQuery" name="q" type="text" value="" placeholder="搜宝贝"
+                       autocomplete="off">
+                <button class="btn-search" type="submit"><i class="iconfont icon-sousuo"></i><span
+                        class="search-img"></span></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="page">
+    <div class="content">
+        <form action="server.php" method="post">
+            <!-- 加载编辑器的容器 -->
+            <script id="container" name="content" type="text/plain">
+            这里写你的初始化内容
+            </script>
+        </form>
+
+
+    </div>
+</div>
+
+<div class="footer">
+    <p>2016 Copyright &copy 大学生 C2C 交易平台</p>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<!-- 配置文件 -->
+<script type="text/javascript" src="libs/ueditor-1.4.3.3/ueditor.config.js"></script>
+<!-- 编辑器源码文件 -->
+<script type="text/javascript" src="libs/ueditor-1.4.3.3/ueditor.all.js"></script>
+<script src="js/publish.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>用户登录</title>
+    <title>首页</title>
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
     <!-- Custom styles for this template -->
@@ -17,14 +17,22 @@
 <div class="top-nav cf">
     <div class="top-nav-inner">
         <div class="top-nav-l fl">
-            <a class="active" href="#">测试导航</a>
-            <a href="#">测试导航</a>
-            <a href="#">测试导航</a>
+            大学生 C2C 交易平台
         </div>
         <div class="top-nav-r fr">
-            <a href="#">测试导航</a>
-            <a href="#">测试导航</a>
-            <a href="#">测试导航</a>
+            <!--通过hidden来控制显示,登录后显示第二个-->
+            <div class="not-login ">
+                <a class="active" href="#">亲,请登录</a>
+                <a href="#">免费注册</a>
+                <a href="#">个人中心</a>
+            </div>
+            <div class="log-in hidden">
+                <a class="active" href="#">显示用户名</a>
+                <a href="#">已发布商品</a>
+                <a href="#">个人中心</a>
+                <!--有管理员权限时,将hidden类名去除-->
+                <a href="#" class="hidden">管理中心</a>
+            </div>
         </div>
     </div>
 </div>
@@ -34,9 +42,9 @@
         <div class="header-menu fl">
             <ul>
                 <li class="active"><a href="#">首页</a></li>
-                <li class=""><a href="#">测试测试</a></li>
-                <li class=""><a href="#">测试试</a></li>
-                <li class=""><a href="#">测试测试测试测</a></li>
+                <li class=""><a href="#">二手商品</a></li>
+                <li class=""><a href="#">个人中心</a></li>
+                <li class=""><a href="#">发布商品</a></li>
             </ul>
         </div>
         <div class="header-search fr">

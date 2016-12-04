@@ -1,12 +1,17 @@
 @import "./common.css";
 
-.module ul, .module li {
+
+/* ------------
+ * module
+--------------- */
+
+.module ul,
+.module li {
     margin: 0;
     padding: 0;
 }
-
-.page {
-    margin-top: 10px;
+.module a:hover {
+    color: #fc0;
 }
 
 .first-module {
@@ -238,15 +243,19 @@
 
 .goods-tags {
     word-break: keep-all;
-    width: 200px;
+    width: 220px;
     height: 188px;
-    padding-left: 35px;
     margin: 15px 0;
     overflow: hidden;
 }
 
 .second-module .goods-tags {
+    padding-left: 35px;
     border-left: 1px solid #e6e6e6;
+}
+
+.third-module .goods-tags {
+    padding-left: 20px;
 }
 
 .goods-tags a {
@@ -307,6 +316,7 @@
     font-weight: 700;
     font-size: 14px;
     color: #f40;
+    font-style: normal;
 }
 
 .item-list .price {

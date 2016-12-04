@@ -5,6 +5,7 @@
 body {
     font-size: 14px;
     min-width: 1190px;
+    font-size:12px;
 }
 ul,
 li,
@@ -44,11 +45,14 @@ ol {
     height: 35px;
     background: #F5F5F5;
     line-height: 34px;
+
 }
 .top-nav a {
     color: #6C6C6C;
     font-size: 12px;
+    padding-right: 10px;
 }
+
 .top-nav a:hover, .top-nav a:focus  {
     color: #ffda44;
     text-decoration: none;
@@ -58,6 +62,14 @@ ol {
     height: 35px;
     margin:0 auto;
 }
+.top-nav-inner a.active {
+    color: #F40;
+}
+
+
+/* ------------
+ * header
+--------------- */
 
 .header {
     position: relative;
@@ -132,10 +144,16 @@ ol {
     cursor: pointer;
     outline: 0;
 }
-
+/* ------------
+ * page
+--------------- */
 .page {
     height:auto;
+    margin-top: 10px;
 }
+/* ------------
+ * footer
+--------------- */
 .footer {
     padding: 30px 0;
     background-color: #333;
