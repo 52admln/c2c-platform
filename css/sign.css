@@ -1,20 +1,11 @@
 @import "./common.css";
 
 body {
-    position: relative;
     height: 600px;
-    min-width: 320px;
-    padding-left:10px;
-    padding-right: 10px;
-    background-color: #eee;
 }
 .form-wrap {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* 使用这个方式居中时，Parent元素必须要给高度*/
-    max-width: 400px;
-    width: 100%;
+    width: 400px;
+    margin: 200px auto;
     border-radius: 5px;
 }
 .form-signin .form-signin-heading,
@@ -43,7 +34,7 @@ body {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
-button[type="submit"] {
+.form-wrap button[type="submit"] {
     margin-top: 15px;
 }
 .signTip {
