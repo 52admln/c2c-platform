@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>管理中心</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/person.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="libs/iconfont/iconfont.css">
+</head>
+
+<body>
+<div class="top-nav cf">
+    <div class="top-nav-inner">
+        <div class="top-nav-l fl">
+            大学生 C2C 交易平台
+        </div>
+        <div class="top-nav-r fr">
+            <!--通过hidden来控制显示,登录后显示第二个-->
+            <div class="not-login hidden">
+                <a class="active" href="#">亲,请登录</a>
+                <a href="#">免费注册</a>
+                <a href="#">个人中心</a>
+            </div>
+            <div class="log-in">
+                <a class="active" href="#">显示用户名</a>
+                <a href="#">已发布商品</a>
+                <a href="#">个人中心</a>
+                <!--有管理员权限时,将hidden类名去除-->
+                <a href="#" class="hidden">管理中心</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header">
+    <div class="header-inner cf">
+        <div class="header-logo fl"></div>
+        <div class="header-menu fl">
+            <ul>
+                <li class=""><a href="#">首页</a></li>
+                <li class=""><a href="#">二手商品</a></li>
+                <li class="active"><a href="#">个人中心</a></li>
+                <li class=""><a href="#">发布商品</a></li>
+            </ul>
+        </div>
+        <div class="header-search fr">
+            <form method="get" action="" name="search">
+                <input class="input-search" id="HeaderSearchQuery" name="q" type="text" value="" placeholder="搜宝贝"
+                       autocomplete="off">
+                <button class="btn-search" type="submit"><i class="iconfont icon-sousuo"></i><span
+                        class="search-img"></span></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="page">
+    <div class="content person cf">
+
+        <div class="leftside">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="https://img.alicdn.com/bao/uploaded/i1/181510260073118980/TB2glCLtFXXXXanXpXXXXXXXXXX_!!0-mytaobao.jpg"
+                         alt="">
+                </div>
+                <a href="#" class="user-nick">52admin</a>
+            </div>
+            <ul class="navigations">
+                <li class=""><a href="person.html">我的宝贝</a></li>
+                <li class=""><a href="person-sellout.html">已售出的</a></li>
+                <li class="selected"><a href="person-admin.html">管理中心</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+           <div class="user-list">
+               <table class="table table-striped">
+                   <thead>
+                   <tr>
+                       <th>#</th>
+                       <th>用户名</th>
+                       <th>注册时间</th>
+                       <th>操作</th>
+                   </tr>
+                   </thead>
+                   <tbody>
+                   <tr>
+                       <td>1</td>
+                       <td>Mark</td>
+                       <td>2015-11-11</td>
+                       <td>
+                           <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
+                           <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>2</td>
+                       <td>Jacob</td>
+                       <td>2015-11-11</td>
+                       <td>
+                           <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
+                           <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>3</td>
+                       <td>Larry</td>
+                       <td>2015-11-11</td>
+                       <td>
+                           <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
+                           <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
+                       </td>
+                   </tr>
+                   </tbody>
+               </table>
+           </div>
+            <div class="modal fade" id="confirmBand">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title">封禁用户</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>当前封禁用户为: ,你确认要执行此操作吗?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                            <button type="button" class="btn btn-primary">确认封禁</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div>
+        <div class="modal fade" id="confirmDel">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title">删除用户</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>当前删除用户为: ,你确认要执行此操作吗?</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary">确认删除</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+    </div>
+
+
+    </div>
+</div>
+
+<div class="footer">
+    <p>2016 Copyright &copy 大学生 C2C 交易平台</p>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/person-admin.js"></script>
+</body>
+</html>

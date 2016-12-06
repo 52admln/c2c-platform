@@ -1,0 +1,135 @@
+@import "./common.css";
+
+.goods_left{
+  width: 990px;
+  float: left;
+}
+.goods_right{
+  width: 180px;
+  min-width:180px;
+  float: left;
+}
+.classify{
+  width: 990px;
+  height: 50px;
+  margin: 0 auto;
+}
+.classify a{
+  color:black;
+  text-decoration:none;
+}
+.classify a:hover{
+  color:#f50;
+}
+
+.classify_in{
+  width: 880px;
+  height: 50px;
+  padding-left: 20px;
+  border: solid 1px #ddd;
+}
+.classify_in li{
+  float: left;
+  line-height: 50px;
+  width: 200px;
+
+}
+.classify_in li a{
+  text-decoration: none;
+  color: black;
+}
+.classify_in li a:hover{
+  color: #999;
+}
+
+.goods_thro{
+  width: 950px;
+  height: auto;
+
+}
+.goods_thro_in{
+  float: left;
+  width: 202px;
+  height: 340px;
+  border: 1px solid #ddd;
+  margin-right: 30px;
+  margin-top:15px;
+}
+.goods_thro_in:hover{
+  border:1px solid #f50;
+}
+.goods_img{
+  width:200px;
+  height: 200px;
+}
+.goods_thro_in ul{
+  width: 90%;
+  margin: 5px auto;
+  height: 140px;
+  padding-left: 0;
+  position: relative;
+}
+.goods_thro_in ul li{
+  float: left;
+
+}
+.heading_1{
+  color: #f50;
+  font-size: 20px;
+  line-height: 30px;
+}
+.heading_1 span{
+  position: absolute;
+  right: 0px;
+  color: #999;
+  font-size: 14px;
+}
+.heading_2{
+  margin-top: 5px;
+  color: #000;
+  font-size: 14px;
+}
+.heading_2 a{
+  color: #000;
+}
+.heading_3{
+  margin-top: 10px;
+  color: #999;
+}
+.heading_3 a{
+  color: #999;
+}
+.heading_3 span{
+  position: absolute;
+  right: 0px;
+  color: #999;
+  font-size: 14px;
+}
+.recommend{
+  width: 180px;
+  height: 700px;
+  margin: 20px auto;
+
+
+}
+.recommend_in{
+  float: left;
+  height: 240px;
+  border: 1px solid #ddd;
+  margin-top:10px;
+  margin-bottom: 10px;
+}
+.recommend_in:hover{
+  border:1px solid #f50;
+}
+.recommend ul{
+  width: 90%;
+  margin: 5px auto;
+  height: 30px;
+  padding-left: 0;
+  position: relative;
+}
+.recommend_img{
+  width:200px;
+  height: 200px;
+}

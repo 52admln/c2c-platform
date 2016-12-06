@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>发布商品</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+    <!-- Custom styles for this template -->
+    <link href="css/person.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="libs/iconfont/iconfont.css">
+</head>
+
+<body>
+<div class="top-nav cf">
+    <div class="top-nav-inner">
+        <div class="top-nav-l fl">
+            大学生 C2C 交易平台
+        </div>
+        <div class="top-nav-r fr">
+            <!--通过hidden来控制显示,登录后显示第二个-->
+            <div class="not-login hidden">
+                <a class="active" href="#">亲,请登录</a>
+                <a href="#">免费注册</a>
+                <a href="#">个人中心</a>
+            </div>
+            <div class="log-in">
+                <a class="active" href="#">显示用户名</a>
+                <a href="#">已发布商品</a>
+                <a href="#">个人中心</a>
+                <!--有管理员权限时,将hidden类名去除-->
+                <a href="#" class="hidden">管理中心</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="header">
+    <div class="header-inner cf">
+        <div class="header-logo fl"></div>
+        <div class="header-menu fl">
+            <ul>
+                <li class=""><a href="#">首页</a></li>
+                <li class=""><a href="#">二手商品</a></li>
+                <li class="active"><a href="#">个人中心</a></li>
+                <li class=""><a href="#">发布商品</a></li>
+            </ul>
+        </div>
+        <div class="header-search fr">
+            <form method="get" action="" name="search">
+                <input class="input-search" id="HeaderSearchQuery" name="q" type="text" value="" placeholder="搜宝贝"
+                       autocomplete="off">
+                <button class="btn-search" type="submit"><i class="iconfont icon-sousuo"></i><span
+                        class="search-img"></span></button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="page">
+    <div class="content person cf">
+
+        <div class="leftside">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <img src="https://img.alicdn.com/bao/uploaded/i1/181510260073118980/TB2glCLtFXXXXanXpXXXXXXXXXX_!!0-mytaobao.jpg"
+                         alt="">
+                </div>
+                <a href="#" class="user-nick">52admin</a>
+            </div>
+            <ul class="navigations">
+                <li class="selected"><a href="person.html">我的宝贝</a></li>
+                <li class=""><a href="person-sellout.html">已售出的</a></li>
+                <li class=""><a href="person-admin.html">管理中心</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <!--当里面没内容的时候,将class hidden去掉,在下面resell-list里加入hidden-->
+            <div class="empty-page no-orders hidden">
+                <p class="tips-title">亲,这里似乎什么东西都没有哦</p>
+                <a href="#" type="button" class="btn btn-success btn-block btn-publish">发布宝贝</a>
+            </div>
+            <div id="resell-list" class="">
+                <!-- 列表头 -->
+                <div class="hd">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th class="item-info">宝贝</th>
+                            <th class="unit">原价（元）</th>
+                            <th class="amount">数量</th>
+                            <th class="pay">卖价（元）</th>
+                            <th class="operation">操作</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+
+                <!-- 列表主体 -->
+                <div class="bd">
+                    <ul>
+
+                        <li class="selected">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td colspan="5" class="deal-date">时间：2016-11-24 13:07
+                                        &nbsp;&nbsp;订单号：1111111111111
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="item-info">
+                                        <a href="//trade.taobao.com/trade/detail/tradeSnap.htm?tradeID=2724287502365181"
+                                           target="_blank"><img alt="查看宝贝详情"
+                                                                src="//img.alicdn.com/bao/uploaded/i3/713464357/TB2IMv1mVXXXXcaXXXXXXXXXXXX_!!713464357.jpg_60x60.jpg"></a>
+                                        <p class="title">
+                                            <a href="//trade.taobao.com/trade/detail/tradeSnap.htm?tradeID=2724287502365181"
+                                               target="_blank">绿联HDMI转VGA转换器带音频高清转vga接口头视频线电脑盒子投影仪</a>
+                                        </p>
+                                        <p class="attr"></p>
+                                        <p class="attr">类型:全新宝贝</p>
+                                        <p></p>
+                                    </td>
+                                    <td class="unit">68.01</td>
+                                    <td class="amount">1</td>
+                                    <td rowspan="1" class="pay">
+                                        <p>67.78</p>
+                                        <p class="sub">
+                                        </p>
+                                    </td>
+                                    <td class="operation">
+                                        <a href="#" type="button" class="btn btn-warning btn-block btn-delete">删除宝贝</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                        <li class="selected">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td colspan="5" class="deal-date">时间：2016-11-24 13:07
+                                        &nbsp;&nbsp;订单号：1111111111111
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="item-info">
+                                        <a href="//trade.taobao.com/trade/detail/tradeSnap.htm?tradeID=2724287502365181"
+                                           target="_blank"><img alt="查看宝贝详情"
+                                                                src="//img.alicdn.com/bao/uploaded/i3/713464357/TB2IMv1mVXXXXcaXXXXXXXXXXXX_!!713464357.jpg_60x60.jpg"></a>
+                                        <p class="title">
+                                            <a href="//trade.taobao.com/trade/detail/tradeSnap.htm?tradeID=2724287502365181"
+                                               target="_blank">绿联HDMI转VGA转换器带音频高清转vga接口头视频线电脑盒子投影仪</a>
+                                        </p>
+                                        <p class="attr"></p>
+                                        <p class="attr">类型:全新宝贝</p>
+                                        <p></p>
+                                    </td>
+                                    <td class="unit">68.01</td>
+                                    <td class="amount">1</td>
+                                    <td rowspan="1" class="pay">
+                                        <p>67.78</p>
+                                        <p class="sub">
+                                        </p>
+                                    </td>
+                                    <td class="operation">
+                                        <a href="#" type="button" class="btn btn-warning btn-block btn-delete">删除宝贝</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="page-nav">
+                    <nav>
+                        <ul class="pagination">
+                            <li><a href="#">&laquo;</a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="disabled"><a href="#">&raquo;</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="footer">
+    <p>2016 Copyright &copy 大学生 C2C 交易平台</p>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

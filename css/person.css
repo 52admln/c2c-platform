@@ -1,0 +1,245 @@
+@import "./common.css";
+
+.person {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.leftside {
+    float: left;
+    width: 160px;
+    padding-right: 10px;
+    line-height: 1;
+}
+
+.leftside .user-info {
+    padding: 20px 0 12px 11px;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.leftside .user-nick {
+    display: block;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.leftside .user-avatar {
+    width: 140px;
+    height: 140px;
+}
+
+.leftside .user-avatar a, .leftside .user-avatar img {
+    width: 120px;
+    height: 120px;
+}
+
+.leftside .user-avatar {
+    background: #F1F1F1;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.leftside .user-avatar img {
+    padding: 0;
+}
+
+.leftside .navigations {
+    padding: 14px 0 12px;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.leftside .navigations li {
+    position: relative;
+    margin-bottom: 6px;
+    z-index: 20;
+    text-align: center;
+}
+
+.leftside .navigations li a {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    color: #397A00;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.leftside .navigations li a:hover {
+    background: #397A00;
+    color: #fff;
+}
+
+.leftside .navigations li.selected a, .leftside .navigations .selected a:hover {
+    color: #FFF;
+    background: #397A00;
+}
+
+.main-content {
+    float: left;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: #DFDFDF;
+    width: 798px;
+    padding: 20px 10px 0;
+    margin-bottom: 40px;
+    min-height: 547px;
+    _height: 547px;
+}
+
+#resell-list {
+    border-top: 1px solid #d9d9d9;
+    padding-top: 1px;
+    color: #404040;
+    margin-bottom: 35px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#resell-list .hd .item-info {
+    padding-left: 38px;
+    width: 332px;
+}
+
+#resell-list .hd {
+    margin-bottom: 1px;
+    background-color: #f3f3f3;
+}
+
+#resell-list .hd th {
+    line-height: 31px;
+    text-align: center;
+}
+
+#resell-list .unit {
+    width: 120px;
+}
+
+#resell-list .amount {
+    width: 120px;
+}
+
+#resell-list .pay {
+    width: 170px;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+}
+
+#resell-list .operation {
+    width: 205px;
+}
+
+#resell-list .bd .deal-date {
+    background-color: #e9f3ff;
+    line-height: 22px;
+    text-align: left;
+    vertical-align: middle;
+    padding: 0 0 0 8px;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 0;
+}
+
+#resell-list .bd td {
+    padding-top: 10px;
+    vertical-align: top;
+    border-top: 1px solid #e6e6e6;
+}
+
+#resell-list .bd .item-info {
+    padding: 10px 0 10px 15px;
+    width: 355px;
+    text-align: left;
+}
+
+#resell-list .bd .item-info img {
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+#resell-list .bd .item-info p {
+    margin-left: 65px;
+}
+
+#resell-list .bd .item-info .title {
+    color: #3c5eca;
+    margin-bottom: 6px;
+}
+
+#resell-list .bd .item-info .attr {
+    color: #676767;
+}
+
+#resell-list .bd td {
+    padding-top: 10px;
+    vertical-align: top;
+    border-top: 1px solid #e6e6e6;
+    text-align: center;
+}
+
+#resell-list .bd td {
+    padding-top: 10px;
+    vertical-align: top;
+    border-top: 1px solid #e6e6e6;
+}
+
+#resell-list .bd .pay {
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+}
+
+.btn-delete {
+    width: 80px;
+    margin: 0 auto;
+}
+
+.page-nav {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.pagination > a {
+    background-color: #d7f0d1;
+    border-color: #d7f0d1;
+}
+
+.pagination > li > a, .pagination > li > span {
+    color: #4b9808;
+}
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+    border-color: #4b9808;
+    background-color: #4b9808;
+}
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+    color: #4b9808;
+    background-color: #eee;
+    border-color: #ddd;
+}
+
+.empty-page {
+    margin: 86px 0 0 72px;
+    padding: 0 0 0 120px;
+    line-height: 1;
+}
+
+.empty-page .tips-title {
+    font-size: 23px;
+    font-family: "Microsoft YaHei", simhei;
+    color: #397a00;
+    margin-bottom: 10px;
+}
+
+.btn-publish {
+    width: 200px;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.user-list {
+    margin: 0 20px
+}

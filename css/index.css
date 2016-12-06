@@ -1,6 +1,5 @@
 @import "./common.css";
 
-
 /* ------------
  * module
 --------------- */
@@ -10,6 +9,7 @@
     margin: 0;
     padding: 0;
 }
+
 .module a:hover {
     color: #fc0;
 }

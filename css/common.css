@@ -1,12 +1,11 @@
-
 /* ------------
  * common
 --------------- */
 body {
-    font-size: 14px;
     min-width: 1190px;
-    font-size:12px;
+    font-size: 12px;
 }
+
 ul,
 li,
 ol {
@@ -14,15 +13,19 @@ ol {
     padding: 0;
     list-style: none;
 }
+
 .hidden {
     display: none;
 }
+
 .fl {
     float: left;
 }
+
 .fr {
     float: right;
 }
+
 .cf:before,
 .cf:after {
     content: " "; /* 1 */
@@ -32,6 +35,7 @@ ol {
 .cf:after {
     clear: both;
 }
+
 .cf {
     *zoom: 1;
 }
@@ -47,21 +51,24 @@ ol {
     line-height: 34px;
 
 }
+
 .top-nav a {
     color: #6C6C6C;
     font-size: 12px;
     padding-right: 10px;
 }
 
-.top-nav a:hover, .top-nav a:focus  {
+.top-nav a:hover, .top-nav a:focus {
     color: #ffda44;
     text-decoration: none;
 }
+
 .top-nav-inner {
     width: 1190px;
     height: 35px;
-    margin:0 auto;
+    margin: 0 auto;
 }
+
 .top-nav-inner a.active {
     color: #F40;
 }
@@ -76,20 +83,25 @@ ol {
     height: 90px;
     background-color: #ffda44;
 }
+
 .header-inner {
     width: 1190px;
     margin: 0 auto;
+    position: relative;
 }
+
 .header-logo {
     width: 208px;
     height: 80px;
     background: url("../img/logo.png") 0 20px no-repeat;
 }
+
 .header-menu {
     position: absolute;
     top: 28px;
     left: 250px;
 }
+
 .header-menu li {
     display: inline;
     line-height: 35px;
@@ -98,12 +110,15 @@ ol {
     font-size: 15px;
 
 }
+
 .header-menu li.active {
     border-bottom: 4px solid #000;
 }
+
 .header-menu li:hover {
     border-bottom: 4px solid #000;
 }
+
 .header-menu a {
     color: #000;
     text-decoration: none;
@@ -111,12 +126,13 @@ ol {
 
 .header-search {
     position: absolute;
-    right: 35px;
+    right: 5px;
     top: 27px;
     width: 222px;
     height: 36px;
     background-color: #333;
 }
+
 .input-search {
     width: 184px;
     height: 32px;
@@ -129,6 +145,7 @@ ol {
     top: 2px;
     font-size: 13px;
 }
+
 .btn-search {
     display: block;
     width: 36px;
@@ -144,13 +161,16 @@ ol {
     cursor: pointer;
     outline: 0;
 }
+
 /* ------------
  * page
 --------------- */
 .page {
-    height:auto;
-    margin-top: 10px;
+    width: 1190px;
+    height: auto;
+    margin: 10px auto 50px auto;
 }
+
 /* ------------
  * footer
 --------------- */
@@ -158,10 +178,12 @@ ol {
     padding: 30px 0;
     background-color: #333;
 }
+
 .footer p {
     color: #ffffff;
     text-align: center;
 }
+
 /* ------------
  * bottom
 --------------- */
