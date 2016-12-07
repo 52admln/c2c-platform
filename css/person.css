@@ -243,3 +243,7 @@
 .user-list {
     margin: 0 20px
 }
+.person-info {
+    width: 400px;
+    margin: 50px auto;
+}
