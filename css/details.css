@@ -103,11 +103,11 @@
 }
 
 .talk {
-    width: 70px;
     height: 30px;
     background-color: #c1e358;
     display: inline-block;
     text-align: center;
+    padding: 0 10px;
     line-height: 30px;
 }
 

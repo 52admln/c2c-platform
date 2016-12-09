@@ -2,7 +2,7 @@
 
 .goods_left{
   width: 990px;
-  float: left;
+  margin: 0 auto;
 }
 .goods_right{
   width: 180px;
