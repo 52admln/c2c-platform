@@ -91,7 +91,7 @@ ol {
 }
 
 .header-logo {
-    width: 208px;
+    width: 300px;
     height: 80px;
     background: url("../img/logo.png") 0 20px no-repeat;
 }
@@ -99,7 +99,7 @@ ol {
 .header-menu {
     position: absolute;
     top: 28px;
-    left: 250px;
+    left: 300px;
 }
 
 .header-menu li {
@@ -110,7 +110,14 @@ ol {
     font-size: 15px;
 
 }
-
+/*new */
+.head-banner {
+    width: 1190px;
+    height: 80px;
+    background: url("../img/banner.jpg") no-repeat;
+    margin: 10px auto;
+}
+/*new*/
 .header-menu li.active {
     border-bottom: 4px solid #000;
 }
