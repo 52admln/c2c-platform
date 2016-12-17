@@ -30,8 +30,11 @@
                 <a class="active" href="#">显示用户名</a>
                 <a href="#">已发布商品</a>
                 <a href="#">个人中心</a>
+
                 <!--有管理员权限时,将hidden类名去除-->
                 <a href="#" class="hidden">管理中心</a>
+
+                <a href="#">注销</a>
             </div>
         </div>
     </div>
@@ -48,7 +51,7 @@
             </ul>
         </div>
         <div class="header-search fr">
-            <form method="get" action="" name="search">
+            <form method="get" action="" name="uploadbanner">
                 <input class="input-search" id="HeaderSearchQuery" name="q" type="text" value="" placeholder="搜宝贝"
                        autocomplete="off">
                 <button class="btn-search" type="submit"><i class="iconfont icon-sousuo"></i><span
@@ -79,63 +82,148 @@
             </ul>
         </div>
         <div class="main-content">
-           <div class="user-list">
-               <table class="table table-striped">
-                   <thead>
-                   <tr>
-                       <th>#</th>
-                       <th>用户名</th>
-                       <th>注册时间</th>
-                       <th>操作</th>
-                   </tr>
-                   </thead>
-                   <tbody>
-                   <tr>
-                       <td>1</td>
-                       <td>Mark</td>
-                       <td>2015-11-11</td>
-                       <td>
-                           <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
-                           <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
-                           <button type="button" class="btn btn-primary btn-xs">设为管理员</button>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>2</td>
-                       <td>Jacob</td>
-                       <td>2015-11-11</td>
-                       <td>
-                           <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
-                           <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
-                           <button type="button" class="btn btn-primary btn-xs">设为管理员</button>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>3</td>
-                       <td>Larry</td>
-                       <td>2015-11-11</td>
-                       <td>
-                           <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
-                           <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
-                           <button type="button" class="btn btn-primary btn-xs">设为管理员</button>
-                       </td>
-                   </tr>
-                   </tbody>
-               </table>
-               <div class="page-nav">
-                   <nav>
-                       <ul class="pagination">
-                           <li><a href="#">«</a></li>
-                           <li class="active"><a href="#">1</a></li>
-                           <li><a href="#">2</a></li>
-                           <li><a href="#">3</a></li>
-                           <li><a href="#">4</a></li>
-                           <li><a href="#">5</a></li>
-                           <li class="disabled"><a href="#">»</a></li>
-                       </ul>
-                   </nav>
-               </div>
-           </div>
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#user" role="tab" data-toggle="tab">用户管理</a></li>
+                <li role="presentation"><a href="#index" role="tab" data-toggle="tab">首页Banner管理</a></li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="user">
+                    <div class="user-list">
+                        <div class="filter">
+                            <form method="get" action="" name="filteuser">
+                                <div class="row">
+                                    <div class="col-md-6"><select class="form-control">
+                                        <option value="1">全部用户</option>
+                                        <option value="2">普通用户</option>
+                                        <option value="3">管理员</option>
+                                        <option value="3">待审核</option>
+                                    </select></div>
+
+                                    <div class="col-md-6"><button class="btn btn-default" type="submit">筛选
+                                    </button></div>
+                                </div>
+                            </form>
+                        </div>
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>用户名</th>
+                                <th>注册时间</th>
+                                <th>用户状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>2015-11-11</td>
+                                <td><span class="label label-success">普通用户</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
+                                    <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
+                                    <button type="button" class="btn btn-success btn-xs disabled">审核</button>
+                                    <button type="button" class="btn btn-primary btn-xs">设为管理员</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jacob</td>
+                                <td>2015-11-11</td>
+                                <td><span class="label label-default">待审核</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
+                                    <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
+                                    <button type="button" class="btn btn-success btn-xs">审核</button>
+                                    <button type="button" class="btn btn-primary btn-xs">设为管理员</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Larry</td>
+                                <td>2015-11-11</td>
+                                <td><span class="label label-danger">管理员</span></td>
+                                <td>
+                                    <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
+                                    <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
+                                    <button type="button" class="btn btn-success btn-xs disabled">审核</button>
+                                    <button type="button" class="btn btn-primary btn-xs disabled">设为管理员</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="page-nav">
+                            <nav>
+                                <ul class="pagination">
+                                    <li><a href="#">«</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li class="disabled"><a href="#">»</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="index">
+                    <h3 class="page-header">管理图片</h3>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>图片1</th>
+                            <th>预览图</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td><img src="img/banner_1.jpg" alt="" height="40"></td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td><img src="img/banner_1.jpg" alt="" height="40"></td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td><img src="img/banner_1.jpg" alt="" height="40"></td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="upload-banner">
+                        <h3 class="page-header">上传图片</h3>
+                        <form role="form" method="post">
+                            <div class="form-group">
+                                <input type="file" accept="image/png,image/gif,image/jpeg" name="upload" id="fileupload">
+                                <p class="help-block">请选择图片格式文件上传,支持文件类型（jpg,png,gif）</p>
+                            </div>
+                            <button type="submit" class="btn btn-primary">上传图片</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
             <div class="modal fade" id="confirmBand">
                 <div class="modal-dialog">
                     <div class="modal-content">

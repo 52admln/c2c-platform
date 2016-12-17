@@ -84,7 +84,7 @@
     border-style: solid;
     border-color: #DFDFDF;
     width: 798px;
-    padding: 20px 10px 0;
+    padding: 20px 10px;
     margin-bottom: 40px;
     min-height: 547px;
     _height: 547px;
@@ -240,10 +240,12 @@
     margin-left: 50px;
 }
 
-.user-list {
-    margin: 0 20px
-}
 .person-info {
     width: 400px;
     margin: 50px auto;
+}
+
+.filter {
+    width:300px;
+    margin:20px 0;
 }
