@@ -5,19 +5,22 @@ $(".js-del").on("click", function (e) {
     $('#confirmDel').modal('show');
 });
 
+var template = 1;
+
 //删除一行
 $("#list").on("click", function (e) {
     if (e.target && e.target.nodeName.toLowerCase() == "button") {
         e.target.parentNode.parentNode.remove();
+        template--;
     }
 });
 
 // 新增一行
 $("#addNewItem").on("click", function () {
     var innerHTML = '<tr>'
-        + '<td><input class="form-control input-sm" type="text" name="ids" maxlength="10" placeholder="输入学号" required>'
+        + '<td><input class="form-control input-sm" type="text" name="ids" id="id-'+ ++template +'" placeholder="输入学号">'
         + '</td>'
-        + '<td><input class="form-control input-sm" type="text" name="names" placeholder = "输入姓名" required></td> '
+        + '<td><input class="form-control input-sm" type="text" name="names" id="name-'+ ++template +'" placeholder="输入姓名"></td> '
         + '<td>'
         + '<button type="button" class="btn btn-danger btn-xs">删除</button>'
         + '</td>'
@@ -57,7 +60,6 @@ $("#studentList").on("click", function (e) {
 });
 
 
-
 //渲染列表
 function renderList(data) {
     var string = "";
@@ -76,52 +78,6 @@ function renderList(data) {
 
 // 表单验证
 
-
-var validator = $("#addStudent").validate({
-    rules: {
-        ids: {
-            required: true,
-            notSpecialString: true
-        },
-        names: {
-            required: true,
-            notSpecialString: true
-        }
-    },
-    messages: {
-        ids: {
-            required: "请输入内容",
-            notSpecialString: "不能输入特殊字符"
-        },
-        names: {
-            required: "请输入内容",
-            notSpecialString: "不能输入特殊字符"
-        }
-    },
-    submitHandler: function() {
-        alert("Submitted!");
-        console.log($("#addStudent").serialize());
-        $.ajax({
-            type: 'POST',
-            url: "AddStudentAction",
-            data: $("#addStudent").serialize(),
-            cache: false,
-            dataType: 'json',
-            success: function (data) {
-                console.log(data);
-                if (data == "{meesage=true}") {
-                    alert("添加成功");
-                } else {
-                    alert("添加失败");
-                }
-            },
-            error: function (error) {
-                alert("失败,请检查网络");
-                console.log(error.statusText);
-            }
-        })
-    }
-});
 var validator = $("#searchStudent").validate({
     rules: {
         searchValue: {
@@ -178,5 +134,75 @@ var validator = $("#searchStudent").validate({
                 });
                 break;
         }
+    }
+});
+
+
+if ($.validator) {
+    //fix: when several input elements shares the same name, but has different id-ies....
+    $.validator.prototype.elements = function () {
+        var validator = this,
+            rulesCache = {};
+        // select all valid inputs inside the form (no submit or reset buttons)
+        // workaround $Query([]).add until http://dev.jquery.com/ticket/2114 is solved
+        return $([]).add(this.currentForm.elements)
+            .filter(":input")
+            .not(":submit, :reset, :image, [disabled]")
+            .not(this.settings.ignore)
+            .filter(function () {
+                var elementIdentification = this.id || this.name;
+                !elementIdentification && validator.settings.debug && window.console && console.error("%o has no id nor name assigned", this);
+                // select only the first element for each name, and only those with rules specified
+                if (elementIdentification in rulesCache || !validator.objectLength($(this).rules()))
+                    return false;
+                rulesCache[elementIdentification] = true;
+                return true;
+            });
+    };
+}
+
+var validator = $("#addStudent").validate({
+    rules: {
+        ids: {
+            required: true,
+            maxlength: 14,
+            notSpecialString: true
+        },
+        names: {
+            required: true,
+            notSpecialString: true
+        }
+    },
+    messages: {
+        ids: {
+            required: "请填写内容。",
+            notSpecialString: "不能输入特殊字符"
+        },
+        names: {
+            required: "请填写内容。",
+            notSpecialString: "不能输入特殊字符"
+        }
+    },
+    submitHandler: function () {
+        console.log($("#addStudent").serialize());
+        $.ajax({
+            type: 'POST',
+            url: "AddStudentAction",
+            data: $("#addStudent").serialize(),
+            cache: false,
+            dataType: 'json',
+            success: function (data) {
+                console.log(data);
+                if (data == "{meesage=true}") {
+                    alert("添加成功");
+                } else {
+                    alert("添加失败");
+                }
+            },
+            error: function (error) {
+                alert("失败,请检查网络");
+                console.log(error.statusText);
+            }
+        })
     }
 });
