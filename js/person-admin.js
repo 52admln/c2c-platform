@@ -75,51 +75,73 @@ function renderList(data) {
 }
 
 // 表单验证
-var validator = $("#addStudent").validate({
-    rules: {
-        ids: {
-            required: true,
-            notSpecialString: true
-        },
-        names: {
-            required: true,
-            notSpecialString: true
+$("#addStudent").validate();
+$("[name=ids]").each(function(){
+    $(this).rules("add", {
+        required: true,
+        email: false,
+        messages: {
+            required: "Specify a valid email"
         }
-    },
-    messages: {
-        ids: {
-            required: "请输入内容",
-            notSpecialString: "不能输入特殊字符"
-        },
-        names: {
-            required: "请输入内容",
-            notSpecialString: "不能输入特殊字符"
-        }
-    },
-    submitHandler: function() {
-        alert("Submitted!");
-        console.log($("#addStudent").serialize());
-        $.ajax({
-            type: 'POST',
-            url: "AddStudentAction",
-            data: $("#addStudent").serialize(),
-            cache: false,
-            dataType: 'json',
-            success: function (data) {
-                console.log(data);
-                if (data == "{meesage=true}") {
-                    alert("添加成功");
-                } else {
-                    alert("添加失败");
-                }
-            },
-            error: function (error) {
-                alert("失败,请检查网络");
-                console.log(error.statusText);
-            }
-        })
-    }
+    });
 });
+$("[name=names]").each(function(){
+    $(this).rules("add", {
+        required: true,
+        email: false,
+        messages: {
+            required: "Specify a valid email"
+        }
+    });
+});
+
+
+
+// var validator = $("#addStudent").validate({
+//     rules: {
+//         ids: {
+//             required: true,
+//             notSpecialString: true
+//         },
+//         names: {
+//             required: true,
+//             notSpecialString: true
+//         }
+//     },
+//     messages: {
+//         ids: {
+//             required: "请输入内容",
+//             notSpecialString: "不能输入特殊字符"
+//         },
+//         names: {
+//             required: "请输入内容",
+//             notSpecialString: "不能输入特殊字符"
+//         }
+//     },
+//     submitHandler: function() {
+//         alert("Submitted!");
+//         console.log($("#addStudent").serialize());
+//         $.ajax({
+//             type: 'POST',
+//             url: "AddStudentAction",
+//             data: $("#addStudent").serialize(),
+//             cache: false,
+//             dataType: 'json',
+//             success: function (data) {
+//                 console.log(data);
+//                 if (data == "{meesage=true}") {
+//                     alert("添加成功");
+//                 } else {
+//                     alert("添加失败");
+//                 }
+//             },
+//             error: function (error) {
+//                 alert("失败,请检查网络");
+//                 console.log(error.statusText);
+//             }
+//         })
+//     }
+// });
 var validator = $("#searchStudent").validate({
     rules: {
         searchValue: {
