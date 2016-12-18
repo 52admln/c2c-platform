@@ -86,6 +86,7 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active"><a href="#user" role="tab" data-toggle="tab">用户管理</a></li>
+                <li role="presentation" class=""><a href="#student" role="tab" data-toggle="tab">学生管理</a></li>
                 <li role="presentation"><a href="#index" role="tab" data-toggle="tab">首页Banner管理</a></li>
             </ul>
 
@@ -103,8 +104,10 @@
                                         <option value="3">待审核</option>
                                     </select></div>
 
-                                    <div class="col-md-6"><button class="btn btn-default" type="submit">筛选
-                                    </button></div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-default" type="submit">筛选
+                                        </button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -215,54 +218,162 @@
                         <h3 class="page-header">上传图片</h3>
                         <form role="form" method="post">
                             <div class="form-group">
-                                <input type="file" accept="image/png,image/gif,image/jpeg" name="upload" id="fileupload">
+                                <input type="file" accept="image/png,image/gif,image/jpeg" name="upload"
+                                       id="fileupload">
                                 <p class="help-block">请选择图片格式文件上传,支持文件类型（jpg,png,gif）</p>
                             </div>
                             <button type="submit" class="btn btn-primary">上传图片</button>
                         </form>
                     </div>
                 </div>
-            </div>
+                <div role="tabpanel" class="tab-pane" id="student">
+                    <h3 class="page-header">管理图片</h3>
+                    <form class="form-inline " role="form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon">学号</div>
+                                <input class="form-control" type="text" placeholder="输入学号">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-addon">姓名</div>
+                                <input class="form-control" type="text" placeholder="输入姓名">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-default">搜索</button>
+                    </form>
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>学号</th>
+                            <th>姓名</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>seadad</td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jacob</td>
+                            <td>seadad</td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Larry</td>
+                            <td>seadad</td>
+                            <td>
+                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-            <div class="modal fade" id="confirmBand">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title">封禁用户</h4>
-                        </div>
-                        <div class="modal-body">
-                            <p>当前封禁用户为: ,你确认要执行此操作吗?</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                            <button type="button" class="btn btn-primary">确认封禁</button>
-                        </div>
-                    </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-            </div><!-- /.modal -->
+                    <div class="upload-banner">
+                        <h3 class="page-header">添加学生</h3>
+                        <form class="form" role="form" method="post" id="addStudent">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th>学号</th>
+                                    <th>姓名</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+
+                                <tbody id="list">
+                                <tr>
+                                    <td><input class="form-control input-sm" type="text" name="ids" placeholder="输入学号">
+                                    </td>
+                                    <td><input class="form-control input-sm" type="text" name="names"
+                                               placeholder="输入姓名"></td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input class="form-control input-sm" type="text" name="ids" placeholder="输入学号">
+                                    </td>
+                                    <td><input class="form-control input-sm" type="text" name="names"
+                                               placeholder="输入姓名"></td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input class="form-control input-sm" type="text" name="ids" placeholder="输入学号">
+                                    </td>
+                                    <td><input class="form-control input-sm" type="text" name="names"
+                                               placeholder="输入姓名"></td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="filter">
+                                <button type="button" class="btn btn-primary " id="addNewItem">新增</button>
+                                <button type="submit" class="btn btn-success ">提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="modal fade" id="confirmDel">
+
+        <div class="modal fade" id="confirmBand">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                        <h4 class="modal-title">删除用户</h4>
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                                class="sr-only">Close</span></button>
+                        <h4 class="modal-title">封禁用户</h4>
                     </div>
                     <div class="modal-body">
-                        <p>当前删除用户为: ,你确认要执行此操作吗?</p>
+                        <p>当前封禁用户为: ,你确认要执行此操作吗?</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                        <button type="button" class="btn btn-primary">确认删除</button>
+                        <button type="button" class="btn btn-primary">确认封禁</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </div>
+    <div class="modal fade" id="confirmDel">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">删除用户</h4>
+                </div>
+                <div class="modal-body">
+                    <p>当前删除用户为: ,你确认要执行此操作吗?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary">确认删除</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</div>
 
 
-    </div>
+</div>
 </div>
 
 <div class="footer">
@@ -271,6 +382,8 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.js"></script>
 <script src="js/person-admin.js"></script>
 </body>
 </html>
