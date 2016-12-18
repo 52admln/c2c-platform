@@ -18,9 +18,9 @@ $("#list").on("click", function (e) {
 // 新增一行
 $("#addNewItem").on("click", function () {
     var innerHTML = '<tr>'
-        + '<td><input class="form-control input-sm" type="text" name="ids" id="id-'+ ++template +'" placeholder="输入学号">'
+        + '<td><input class="form-control input-sm" type="text" name="ids" id="id-' + ++template + '" placeholder="输入学号">'
         + '</td>'
-        + '<td><input class="form-control input-sm" type="text" name="names" id="name-'+ ++template +'" placeholder="输入姓名"></td> '
+        + '<td><input class="form-control input-sm" type="text" name="names" id="name-' + ++template + '" placeholder="输入姓名"></td> '
         + '<td>'
         + '<button type="button" class="btn btn-danger btn-xs">删除</button>'
         + '</td>'
@@ -165,6 +165,7 @@ var validator = $("#addStudent").validate({
     rules: {
         ids: {
             required: true,
+            number: true,
             maxlength: 14,
             notSpecialString: true
         },
@@ -176,6 +177,8 @@ var validator = $("#addStudent").validate({
     messages: {
         ids: {
             required: "请填写内容。",
+            number: "输入数字",
+            maxlength: "最长14个数字",
             notSpecialString: "不能输入特殊字符"
         },
         names: {
@@ -184,11 +187,18 @@ var validator = $("#addStudent").validate({
         }
     },
     submitHandler: function () {
-        console.log($("#addStudent").serialize());
+        var postStr = "";
+        $("input[name=ids]").each(function (item) {
+            postStr += "ids=" + $(this).val() + "&";
+        });
+        $("input[name=names]").each(function (item) {
+            postStr += "names=" + $(this).val() + "&";
+        });
+        postStr = postStr.substring(0, postStr.length - 1);
         $.ajax({
             type: 'POST',
             url: "AddStudentAction",
-            data: $("#addStudent").serialize(),
+            data: postStr,
             cache: false,
             dataType: 'json',
             success: function (data) {
