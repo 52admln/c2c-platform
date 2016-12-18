@@ -227,22 +227,23 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="student">
-                    <h3 class="page-header">管理图片</h3>
-                    <form class="form-inline " role="form">
+                    <h3 class="page-header">学生管理</h3>
+                    <form class="form-inline" role="form" method="post" name="searchStudent" id="searchStudent">
                         <div class="form-group">
                             <div class="input-group">
-                                <div class="input-group-addon">学号</div>
-                                <input class="form-control" type="text" placeholder="输入学号">
+                                <select class="form-control" name="searchType">
+                                    <option value="1">按学号搜索</option>
+                                    <option value="2">按姓名搜索</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-addon">姓名</div>
-                                <input class="form-control" type="text" placeholder="输入姓名">
-                            </div>
+                            <input class="form-control" type="text" name="searchValue">
                         </div>
-                        <button type="submit" class="btn btn-default">搜索</button>
+                        <button type="submit" class="btn btn-default" id="submitSearch">搜索</button>
                     </form>
+
+
                     <table class="table table-striped">
                         <thead>
                         <tr>
@@ -252,13 +253,13 @@
                             <th>操作</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="studentList">
                         <tr>
                             <td>1</td>
                             <td>Mark</td>
                             <td>seadad</td>
                             <td>
-                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                <button type="button" class="btn btn-danger btn-xs" data-id="2015002529">删除</button>
                             </td>
                         </tr>
                         <tr>
@@ -266,7 +267,7 @@
                             <td>Jacob</td>
                             <td>seadad</td>
                             <td>
-                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                <button type="button" class="btn btn-danger btn-xs" data-id="2015002522">删除</button>
                             </td>
                         </tr>
                         <tr>
@@ -274,7 +275,7 @@
                             <td>Larry</td>
                             <td>seadad</td>
                             <td>
-                                <button type="button" class="btn btn-danger btn-xs">删除</button>
+                                <button type="button" class="btn btn-danger btn-xs" data-id="2015002521">删除</button>
                             </td>
                         </tr>
                         </tbody>
@@ -282,7 +283,7 @@
 
                     <div class="upload-banner">
                         <h3 class="page-header">添加学生</h3>
-                        <form class="form" role="form" method="post" id="addStudent">
+                        <form class="form" role="form" method="post" id="addStudent" name="addStudent">
                             <table class="table">
                                 <thead>
                                 <tr>
@@ -294,28 +295,10 @@
 
                                 <tbody id="list">
                                 <tr>
-                                    <td><input class="form-control input-sm" type="text" name="ids" placeholder="输入学号">
+                                    <td><input class="form-control input-sm" type="number" name="ids" maxlength="10" placeholder="输入学号" required>
                                     </td>
                                     <td><input class="form-control input-sm" type="text" name="names"
-                                               placeholder="输入姓名"></td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-control input-sm" type="text" name="ids" placeholder="输入学号">
-                                    </td>
-                                    <td><input class="form-control input-sm" type="text" name="names"
-                                               placeholder="输入姓名"></td>
-                                    <td>
-                                        <button type="button" class="btn btn-danger btn-xs">删除</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-control input-sm" type="text" name="ids" placeholder="输入学号">
-                                    </td>
-                                    <td><input class="form-control input-sm" type="text" name="names"
-                                               placeholder="输入姓名"></td>
+                                               placeholder="输入姓名" required></td>
                                     <td>
                                         <button type="button" class="btn btn-danger btn-xs">删除</button>
                                     </td>
@@ -324,7 +307,7 @@
                             </table>
                             <div class="filter">
                                 <button type="button" class="btn btn-primary " id="addNewItem">新增</button>
-                                <button type="submit" class="btn btn-success ">提交</button>
+                                <button type="submit" class="btn btn-success " id="submitItems">提交</button>
                             </div>
                         </form>
                     </div>
