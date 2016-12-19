@@ -1,13 +1,13 @@
 @import "./common.css";
 
 .banner_in {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     height: 70px;
-    border-top: solid 3px #555;
+    /* border-top: solid 3px #fff; */
     border-left: solid 1px #e7e7e7;
     border-right: solid 1px #e7e7e7;
-    border-bottom: solid 1px #e7e7e7;
+    border-bottom: solid 1px #e7e7e7
 }
 
 .username {
@@ -71,7 +71,7 @@
     margin: 0 auto;
 }
 
-.show_r_t p {
+.show_r_t > p {
     color: #000;
     font-weight: bold;
     font-size: 18px;
@@ -87,13 +87,15 @@
 
 .show_mes li {
     width: 100%;
-    height: 35px;
-    line-height: 24px;
+    line-height: 32px;
     text-align: left;
     color: #333;
     font-size: 14px;
 }
-
+.tips {
+    color: #ff5500;
+    font-weight: bold;
+}
 .li_two {
     border-bottom: 1px solid #ddd;
 }
@@ -109,6 +111,13 @@
     text-align: center;
     padding: 0 10px;
     line-height: 30px;
+    color: #fff;
+    vertical-align: middle;
+}
+
+.talk:hover {
+    color: #666;
+    text-decoration: none;
 }
 
 .change {
@@ -120,20 +129,24 @@
     line-height: 30px;
     color: black;
     font-size: 14px;
-
+    vertical-align: middle;
 }
 
 .change:hover {
-    border: #f40 solid 2px;
+    border: 1px solid #f40;
     text-decoration: none;
 }
 
 .buy {
     width: 200px;
     height: 50px;
-    font-weight: blod;
+    margin: 20px 0;
+    font-weight: bold;
     font-size: 24px;
     background-color: #f40;
+}
+.buy:hover {
+    background-color: #F22D00;
 }
 
 .show_r_d {
@@ -369,28 +382,30 @@
     width: 800px;
 
 }
-
+.recover_in {
+    margin-top: 20px;
+}
 .recover textarea {
     width: 700px;
     height: 78px;
     float: left;
-    margin-top: 20px;
     margin-left: 20px;
     max-width: 700px;
 }
 
 .recover input {
     width: 50px;
-    height: 80px;
+    height: 78px;
     float: left;
-    margin-top: 18px;
     background-color: rgb(255, 218, 68);
     border: none;
     line-height: 80px;
 }
+
 /* new */
 .goods-del {
     margin-right: 20px;
     margin-top: 15px;
 }
+
 /* new */

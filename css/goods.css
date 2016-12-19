@@ -1,7 +1,7 @@
 @import "./common.css";
 
 .goods_left {
-    width: 990px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -12,8 +12,9 @@
 }
 
 .classify {
-    width: 990px;
+    width: 1190px;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 .classify a {
@@ -26,7 +27,7 @@
 }
 
 .classify_in {
-    width: 880px;
+    width: 100%;
     padding-left: 20px;
     border: solid 1px #ddd;
 }
@@ -34,8 +35,8 @@
 .classify_in li {
     float: left;
     line-height: 50px;
-    width: 200px;
-
+    /* width: 200px; */
+    padding: 0 40px;
 }
 
 .classify_in li a {
@@ -44,13 +45,15 @@
 }
 
 .classify_in li a:hover {
-    color: #999;
+    color: #f50;
 }
 
 .goods_thro {
-    width: 950px;
+    width: 100%;
     height: auto;
+    margin: 20px 0;
 
+    padding-bottom: 20px;
 }
 
 .goods_thro_in {
@@ -58,17 +61,34 @@
     width: 202px;
     height: 340px;
     border: 1px solid #ddd;
-    margin-right: 30px;
-    margin-top: 15px;
+    margin: 15px 17px 0 17px;
+    -webkit-transition: border-color .3s;
+    -moz-transition: border-color .3s;
+    -o-transition: border-color .3s;
+    transition: border-color .3s;
 }
-
 .goods_thro_in:hover {
     border: 1px solid #f50;
+    -webkit-transition: border-color .3s;
+    -moz-transition: border-color .3s;
+    -o-transition: border-color .3s;
+    transition: border-color .3s;
 }
 
 .goods_img {
     width: 200px;
     height: 200px;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+.goods_img:hover {
+    opacity: .8;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
 }
 
 .goods_thro_in ul {

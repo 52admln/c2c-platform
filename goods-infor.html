@@ -22,7 +22,7 @@
         </div>
         <div class="top-nav-r fr">
             <!--通过hidden来控制显示,登录后显示第二个-->
-            <div class="not-login hidden">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   --------------
+            <div class="not-login hidden"> --------------
                 <a class="active" href="#">亲,请登录</a>
                 <a href="#">免费注册</a>
                 <a href="#">个人中心</a>
@@ -39,17 +39,11 @@
         </div>
     </div>
 </div>
+<!-- #############################这里变了START#############################-->
 <div class="header">
     <div class="header-inner cf">
         <div class="header-logo fl"></div>
-        <div class="header-menu fl">
-            <ul>
-                <li class=""><a href="#">首页</a></li>
-                <li class=""><a href="#">二手商品</a></li>
-                <li class=""><a href="#">个人中心</a></li>
-                <li class="active"><a href="#">发布商品</a></li>
-            </ul>
-        </div>
+
         <div class="header-search fr">
             <form method="get" action="" name="search">
                 <input class="input-search" id="HeaderSearchQuery" name="q" type="text" value="" placeholder="搜宝贝"
@@ -60,11 +54,15 @@
         </div>
     </div>
 </div>
-<!--new-->
-<div class="head-banner">
-
+<div class="header-nav">
+    <ul class="header-menu cf">
+        <li class="active"><a href="#">首页</a></li>
+        <li class=""><a href="#">二手商品</a></li>
+        <li class=""><a href="#">个人中心</a></li>
+        <li class=""><a href="#">发布商品</a></li>
+    </ul>
 </div>
-<!--new-->
+<!-- #############################这里变了END#############################-->
 <div class="page cf">
     <div class="banner_in">
         <ul class="username">
@@ -152,7 +150,9 @@
                         <div class="dsc_bt_in">
                             留言
                         </div>
-                        <div class="dsc_zw">
+                        <!-- #############################这里变了#############################-->
+                        <div class="dsc_zw cf">
+                            <!-- #############################这里变了END#############################-->
                             <div class="message">
                                 <img src="img/tx.jpg" alt="" class="tx">
                                 <ul>
@@ -167,10 +167,10 @@
                         </div>
                         <div class="recover">
                             <form action="">
-                            <div class="recover_in">
-                                <textarea name="comments" id="" cols="30" rows="10" ></textarea>
-                                <input type="submit" value="提交">
-                            </div>
+                                <div class="recover_in">
+                                    <textarea name="comments" id="" cols="30" rows="10"></textarea>
+                                    <input type="submit" value="提交">
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -192,15 +192,52 @@
             <div class="show_r_t">
                 <p>2014macbook pro 13.3 全闪存</p>
                 <ul class="show_mes">
-                    <li>转 卖 价：<span style="font-size: 24px; color: #999;">$</span><span style="font-size: 24px; color:#f40;">9999.99</span></li>
+                    <!-- #############################这里变了#############################-->
+                    <li>转 卖 价：<span style="font-size: 24px; color: #666;padding-right: 5px">$</span><span
+                            style="font-size: 24px; color:#f40;">9999.99</span></li>
+
                     <li class="li_two">原 &nbsp;&nbsp;&nbsp; 价：$9999.99</li>
                     <li class="li_three">成 &nbsp;&nbsp;&nbsp; 价：$9999.99</li>
                     <li>所 在 地：火星</li>
                     <li>联系方式：<a href="#" target="_blank" class="talk">与他对话</a></li>
-                    <li>交易方式：<a href="#" target="_blank" class="change">与他交易</a></li>
-                </ul>
-                <button type="button" class="btn btn-warning buy">立即购买</button>
+                    <li>交易方式：<a href="#" target="_blank" class="change">与他联系</a></li>
+                    <li>
+                        <button type="button" class="btn btn-warning buy" data-toggle="modal" data-target="#contact">与他联系</button>
+                    </li>
+                    <li><span class="tips">交易流程:</span><p>买家通过上方“与他联系”与卖家取得联系,并与卖家经过协商,最终卖家同意交易,即交易成功。</p></li>
 
+                </ul>
+                <!-- Modal -->
+                <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="contactLabel">提交购买</h4>
+                            </div>
+                            <form method="post">
+                            <div class="modal-body">
+
+                                    <div class="form-group">
+                                        <label for="">联系方式</label>
+                                        <input name="contact" type="text" class="form-control" placeholder="填写您的联系方式">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">留言</label>
+                                        <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
+                                    </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button type="submit" class="btn btn-primary">确认提交</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- #############################这里变了END#############################-->
             </div>
         </div>
     </div>

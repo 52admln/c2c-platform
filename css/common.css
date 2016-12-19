@@ -80,8 +80,8 @@ ol {
 
 .header {
     position: relative;
-    height: 90px;
-    background-color: #ffda44;
+    height: 110px;
+    /*background-color: #ffda44;*/
 }
 
 .header-inner {
@@ -91,24 +91,32 @@ ol {
 }
 
 .header-logo {
-    width: 300px;
+    width: 600px;
     height: 80px;
-    background: url("../img/logo.png") 0 20px no-repeat;
+    margin: 10px 0;
+    background: url("../img/logo.png") no-repeat;
+}
+
+.header-nav {
+    width:100%;
+    background-color: #ffda44;
+    border-bottom: 2px solid #e0ac2f;
 }
 
 .header-menu {
-    position: absolute;
-    top: 28px;
-    left: 300px;
+    width:1190px;
+    height:45px;
+    margin: 0 auto;
 }
 
 .header-menu li {
-    display: inline;
-    line-height: 35px;
-    padding: 8px 0;
-    margin: 0 15px;
+    float: left;
+    line-height: 45px;
+    padding: 0 20px;
     font-size: 15px;
-
+}
+.header-menu li a {
+    display: inline-block;
 }
 /*new */
 .head-banner {
@@ -119,18 +127,27 @@ ol {
 }
 /*new*/
 .header-menu li.active {
-    border-bottom: 4px solid #000;
+    background: #f7c600;
 }
 
 .header-menu li:hover {
-    border-bottom: 4px solid #000;
+    background: #f7c600;
+    cursor: pointer;
+}
+.header-menu li.nav-info {
+    background: #f9d01c;
 }
 
 .header-menu a {
+    display: block;
     color: #000;
     text-decoration: none;
+    cursor: pointer;
 }
-
+.nav-info.nav-info {
+    width: 180px;
+    text-align: center;
+}
 .header-search {
     position: absolute;
     right: 5px;
@@ -175,7 +192,7 @@ ol {
 .page {
     width: 1190px;
     height: auto;
-    margin: 10px auto 50px auto;
+    margin: 0 auto 50px auto;
 }
 
 /* ------------

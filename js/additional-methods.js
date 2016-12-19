@@ -4,3 +4,7 @@ jQuery.validator.addMethod("isUserName", function (value, element) {
 jQuery.validator.addMethod("notSpecialString", function (value, element) {
     return this.optional(element) || /^([\u4e00-\u9fa5]+|[a-zA-Z0-9]+)$/.test(value);
 });
+
+jQuery.validator.addMethod("isSid", function (value, element) {
+    return this.optional(element) || /^()$/.test(value);
+});

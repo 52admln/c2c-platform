@@ -1,12 +1,12 @@
 @import "./common.css";
 
-body {
-    height: 600px;
-}
 .form-wrap {
-    width: 400px;
-    margin: 200px auto;
+    width: 500px;
+    margin: 70px auto;
     border-radius: 5px;
+}
+label {
+    font-size: 14px;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
@@ -33,9 +33,6 @@ body {
     margin-bottom: -1px;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
-}
-.form-wrap button[type="submit"] {
-    margin-top: 15px;
 }
 .signTip {
     padding-top: 5px;

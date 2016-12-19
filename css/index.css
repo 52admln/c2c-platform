@@ -15,16 +15,21 @@
 }
 
 .first-module {
+    position: relative;
     width: 1190px;
     margin: 0 auto;
 }
 
 .category {
-    border: 1px solid #e6e6e6;
-    background-color: #fff;
-    width: 240px;
+    position: absolute;
+    top: 1px;
+    left: 0;
+    /* border: 1px solid #e6e6e6; */
+    background-color: rgba(0, 0, 0, 0.41);
+    width: 180px;
     font-size: 12px;
     margin-top: -1px;
+    z-index: 10;
 }
 
 .list-item {
@@ -34,11 +39,12 @@
 }
 
 .main-cate {
-    border-top: 1px solid #f2f2f2;
+    /* border-bottom: 1px solid #f2f2f2; */
     overflow: hidden;
     padding: 10px 0;
     line-height: 24px;
     margin-top: -1px;
+    /* color: #fff; */
 }
 
 .main-cate b {
@@ -46,7 +52,8 @@
     vertical-align: top;
     width: 23px;
     height: 19px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
+    margin-left: 20px;
 }
 
 .main-cate.digit b {
@@ -86,12 +93,15 @@
 }
 
 .main-cate a {
-    color: #333;
+    color: #fff;
+    font-size: 14px;
+    /* text-indent: 2em; */
+    padding-left: 20px;
 }
 
-.main-cate a:hover {
-    color: #9dc91c;
-}
+/*.main-cate a:hover {*/
+    /*color: #9dc91c;*/
+/*}*/
 
 .main-link {
     margin-left: 8px;
@@ -104,7 +114,7 @@
 }
 
 .list-item:hover {
-    background: #f3f3f3;
+    background-color: rgba(0, 0, 0, 0.47)
 }
 
 .list-item-hover .extra-cate {
@@ -121,19 +131,20 @@
 }
 
 .index-slider {
-    width: 940px;
-    height: 266px;
+    width: 1190px;
+    height: 410px;
     border-bottom: 1px solid #e6e6e6;
     overflow: hidden;
-    margin: 0 0 0 10px;
 }
-
+.carousel-control.right {
+    background-image: none;
+}
 .slider {
-    height: 260px
+    height: 410px
 }
 
 .carousel-inner {
-    height: 258px;
+    height: 410px;
 }
 
 .module {
@@ -169,7 +180,7 @@
 
 .second-module .inner-content, .third-module .inner-content {
     padding-top: 20px;
-    padding-left: 40px;
+    padding-bottom: 20px;
 }
 
 .goods-tags {
@@ -197,52 +208,88 @@
 }
 
 .goods-list {
-    width: 1100px;
+    width: 1190px;
     margin: 0 auto;
 }
 
 
 .goods-list .item-list li {
     float: left;
+    margin-top: 28px;
+    margin-right: 20px;
+    border: 1px solid transparent;
+    background-color: #f5f5f5;
+    color: #6c6c6c;
+    width: 222px;
+    height: 302px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: border-color .3s;
+    -moz-transition: border-color .3s;
+    -o-transition: border-color .3s;
+    transition: border-color .3s;
+}
+.goods-list .item-list li:hover {
+    border-color: #F40;
+    -webkit-transition: border-color .3s;
+    -moz-transition: border-color .3s;
+    -o-transition: border-color .3s;
+    transition: border-color .3s;
+}
+.goods-list .item-list li:first-child {
+    /*margin-left:4px;*/
+}
+.goods-list .item-list li:last-child {
+    margin-right:0px;
 }
 
-.item-list .item {
-    width: 142px;
-}
-
-.item-pic, .item-pic a {
+.item-pic a {
     height: 142px;
     width: 142px;
 }
 
 .item-pic img {
-    max-width: 142px;
-    max-height: 142px;
-    _width: 142px;
+    width: 100%;
+    min-height: 220px;
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+.item-pic img:hover {
+    opacity: .8;
 }
 
+.item-pic.sh-pic {
+    margin-bottom: 8px;
+}
 .item-list .title {
-    height: 23px;
+    padding: 3px 12px;
+    margin-bottom: 0;
     line-height: 18px;
+    color: #6c6c6c;
+    transition: color .3s;
+    height: 36px;
     overflow: hidden;
-    text-align: right;
-    padding: 5px 5px 0;
+    text-overflow: -o-ellipsis-lastline;
 }
-
-.item-list .item {
-    margin: 0 15px 22px 0;
-    width: 142px;
-    overflow: hidden;
+.item-list .title  a{
+    color: #6c6c6c;
+    font-size: 12px;
 }
-
+.item-list .title  a:hover {
+    text-decoration: none;
+}
 .price-block {
     font-family: Verdana;
-    font-size: 12px;
+    color: #f40;
+    font-size: 18px;
+    padding: 0 13px;
 }
 
 .price-block .price em {
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
     color: #f40;
     font-style: normal;
 }
@@ -250,7 +297,6 @@
 .item-list .price {
     line-height: 14px;
     margin-top: 5px;
-    text-align: right;
     padding-right: 5px;
 }
 

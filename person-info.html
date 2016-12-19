@@ -38,17 +38,11 @@
         </div>
     </div>
 </div>
+<!-- #############################这里变了START#############################-->
 <div class="header">
     <div class="header-inner cf">
         <div class="header-logo fl"></div>
-        <div class="header-menu fl">
-            <ul>
-                <li class=""><a href="#">首页</a></li>
-                <li class=""><a href="#">二手商品</a></li>
-                <li class=""><a href="#">个人中心</a></li>
-                <li class="active"><a href="#">发布商品</a></li>
-            </ul>
-        </div>
+
         <div class="header-search fr">
             <form method="get" action="" name="search">
                 <input class="input-search" id="HeaderSearchQuery" name="q" type="text" value="" placeholder="搜宝贝"
@@ -59,11 +53,16 @@
         </div>
     </div>
 </div>
-<!--new-->
-<div class="head-banner">
-
+<div class="header-nav">
+    <ul class="header-menu cf">
+        <li class="nav-info">个人中心</li>
+        <li class="active"><a href="#">首页</a></li>
+        <li class=""><a href="#">二手商品</a></li>
+        <li class=""><a href="#">个人中心</a></li>
+        <li class=""><a href="#">发布商品</a></li>
+    </ul>
 </div>
-<!--new-->
+<!-- #############################这里变了END#############################-->
 <div class="page">
     <div class="content">
 
@@ -87,18 +86,28 @@
             <div class="main-content">
                 <div class="person-info">
                     <h2 class="page-header">个人信息维护</h2>
+                    <!-- #############################这里变了#############################-->
                     <form role="form" method="post">
                         <div class="form-group">
                             <label for="">昵称</label>
-                            <input type="text" name="goods_name" class="form-control" placeholder="">
+                            <input type="text" name="goods_name" class="form-control" placeholder="输入昵称">
                         </div>
                         <div class="form-group">
                             <label for="">头像</label>
                             <input type="file" accept="image/png,image/gif,image/jpeg" name="upload" id="fileupload">
                             <p class="help-block">请选择图片格式文件上传,支持文件类型（jpg,png,gif）</p>
                         </div>
+                        <div class="form-group">
+                            <label for="">旧密码</label>
+                            <input type="text" name="oldpwd" class="form-control" placeholder="留空则不修改密码">
+                            <label for="">新密码</label>
+                            <input type="text" name="newpwd" class="form-control" placeholder="">
+                            <label for="">重复密码</label>
+                            <input type="text" name="confirmpwd" class="form-control" placeholder="">
+                        </div>
                         <button type="submit" class="btn btn-default">提交</button>
                     </form>
+                    <!-- #############################这里变了END#############################-->
                 </div>
             </div>
         </div>

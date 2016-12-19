@@ -1,13 +1,13 @@
 @import "./common.css";
 
 .person {
-    width: 990px;
+    width: 1190px;
     margin: 0 auto;
 }
 
 .leftside {
     float: left;
-    width: 160px;
+    width: 180px;
     padding-right: 10px;
     line-height: 1;
 }
@@ -83,7 +83,7 @@
     border-width: 0 1px 1px;
     border-style: solid;
     border-color: #DFDFDF;
-    width: 798px;
+    width: 1010px;
     padding: 20px 10px;
     margin-bottom: 40px;
     min-height: 547px;

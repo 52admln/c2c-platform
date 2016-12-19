@@ -21,16 +21,15 @@
         </div>
         <div class="top-nav-r fr">
             <!--通过hidden来控制显示,登录后显示第二个-->
-            <div class="not-login hidden">
+            <div class="not-login ">
                 <a class="active" href="#">亲,请登录</a>
                 <a href="#">免费注册</a>
                 <a href="#">个人中心</a>
             </div>
-            <div class="log-in">
+            <div class="log-in hidden">
                 <a class="active" href="#">显示用户名</a>
                 <a href="#">已发布商品</a>
                 <a href="#">个人中心</a>
-
                 <!--有管理员权限时,将hidden类名去除-->
                 <a href="#" class="hidden">管理中心</a>
 
@@ -39,19 +38,13 @@
         </div>
     </div>
 </div>
+<!-- #############################这里变了START#############################-->
 <div class="header">
     <div class="header-inner cf">
         <div class="header-logo fl"></div>
-        <div class="header-menu fl">
-            <ul>
-                <li class=""><a href="#">首页</a></li>
-                <li class=""><a href="#">二手商品</a></li>
-                <li class="active"><a href="#">个人中心</a></li>
-                <li class=""><a href="#">发布商品</a></li>
-            </ul>
-        </div>
+
         <div class="header-search fr">
-            <form method="get" action="" name="uploadbanner">
+            <form method="get" action="" name="search">
                 <input class="input-search" id="HeaderSearchQuery" name="q" type="text" value="" placeholder="搜宝贝"
                        autocomplete="off">
                 <button class="btn-search" type="submit"><i class="iconfont icon-sousuo"></i><span
@@ -60,9 +53,16 @@
         </div>
     </div>
 </div>
-<div class="head-banner">
-
+<div class="header-nav">
+    <ul class="header-menu cf">
+        <li class="nav-info">个人中心</li>
+        <li class="active"><a href="#">首页</a></li>
+        <li class=""><a href="#">二手商品</a></li>
+        <li class=""><a href="#">个人中心</a></li>
+        <li class=""><a href="#">发布商品</a></li>
+    </ul>
 </div>
+<!-- #############################这里变了END#############################-->
 <div class="page">
     <div class="content person cf">
 

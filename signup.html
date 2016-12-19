@@ -36,17 +36,11 @@
         </div>
     </div>
 </div>
+<!-- #############################这里变了START#############################-->
 <div class="header">
     <div class="header-inner cf">
         <div class="header-logo fl"></div>
-        <div class="header-menu fl">
-            <ul>
-                <li class="active"><a href="#">首页</a></li>
-                <li class=""><a href="#">二手商品</a></li>
-                <li class=""><a href="#">个人中心</a></li>
-                <li class=""><a href="#">发布商品</a></li>
-            </ul>
-        </div>
+
         <div class="header-search fr">
             <form method="get" action="" name="search">
                 <input class="input-search" id="HeaderSearchQuery" name="q" type="text" value="" placeholder="搜宝贝"
@@ -57,6 +51,15 @@
         </div>
     </div>
 </div>
+<div class="header-nav">
+    <ul class="header-menu cf">
+        <li class="active"><a href="#">首页</a></li>
+        <li class=""><a href="#">二手商品</a></li>
+        <li class=""><a href="#">个人中心</a></li>
+        <li class=""><a href="#">发布商品</a></li>
+    </ul>
+</div>
+<!-- #############################这里变了END#############################-->
 <div class="page">
     <div class="content">
 <div class="container form-wrap">
@@ -68,19 +71,63 @@
             注册成功，请<strong><a href="signup.html">点击登录</a></strong>。
         </div>
     </div>
-    <form class="form-signin" id="signupForm" role="form" action="" method="post">
-        <h2 class="form-signin-heading">用户注册</h2>
-        <!-- new -->
-        <input type="text" name="sid" class="form-control" placeholder="学号" required autofocus>
-        <!-- new -->
-        <input type="text" name="username" class="form-control" placeholder="用户名" required>
-        <input type="password" id="password" name="password" class="form-control" placeholder="密码" required>
-        <input type="password" name="confirm_password" class="form-control" placeholder="重复密码" required>
+    <!-- #############################这里变了#############################-->
+    <h2 class="form-signin-heading">用户注册</h2>
+
+    <div class="form-group">
+        <div class="radio">
+            <label for="student"><input class="" id="student" type="radio" name="usertype" value="0" checked>普通用户</label>
+            <label for="normal"><input class="" id="normal" type="radio" name="usertype" value="1" >在校学生</label>
+        </div>
+
+    </div>
+
+    <form class="form-signin" role="form" id="signforNomal" action="" method="post">
+        <div class="form-group">
+            <label for="">邮箱</label>
+            <input type="email" name="email" class="form-control" placeholder="邮箱"  >
+        </div>
+        <div class="form-group">
+            <label for="">用户名</label>
+            <input type="text" name="username" class="form-control" placeholder="用户名" >
+        </div>
+        <div class="form-group">
+            <label for="">密码</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="密码" >
+        </div>
+        <div class="form-group">
+            <label for="">重复密码</label>
+            <input type="password" name="confirm_password" class="form-control" placeholder="重复密码" >
+        </div>
         <button class="btn btn-warning btn-lg btn-block" type="submit">注册</button>
-        <button class="btn btn-default btn-lg btn-block" id="reset" type="reset">重置</button>
+        <button class="btn btn-default btn-lg btn-block" type="reset">重置</button>
+    </form>
+    <form class="form-signin hidden" id="signforStudent" role="form" action="" method="post">
+        <div class="form-group">
+            <label for="">邮箱</label>
+            <input type="email" name="email" class="form-control" placeholder="邮箱"  >
+        </div>
+        <div class="form-group">
+            <label for="">用户名</label>
+            <input type="text" name="username" class="form-control" placeholder="用户名" >
+        </div>
+        <div class="form-group">
+            <label for="">密码</label>
+            <input type="password" id="password1" name="password" class="form-control" placeholder="密码" >
+        </div>
+        <div class="form-group">
+            <label for="">重复密码</label>
+            <input type="password" name="confirm_password" class="form-control" placeholder="重复密码" >
+        </div>
+        <div class="form-group">
+            <label for="">学号</label>
+            <input type="text" name="sid" class="form-control" placeholder="学号" >
+        </div>
+        <button class="btn btn-warning btn-lg btn-block" type="submit">注册</button>
+        <button class="btn btn-default btn-lg btn-block" type="reset">重置</button>
     </form>
     <p class="signTip">已有帐号，<a href="./signin.html">点击登录</a></p>
-
+    <!-- #############################这里变了END#############################-->
 </div> <!-- /container -->
     </div>
 </div>
@@ -91,6 +138,8 @@
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/additional-methods.js"></script>
-<script src="js/signin.js"></script>
+<!-- #############################这里变了#############################-->
+<script src="js/signup.js"></script>
+<!-- #############################这里变了END#############################-->
 </body>
 </html>

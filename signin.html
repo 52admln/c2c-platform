@@ -38,17 +38,11 @@
         </div>
     </div>
 </div>
+<!-- #############################这里变了START#############################-->
 <div class="header">
     <div class="header-inner cf">
         <div class="header-logo fl"></div>
-        <div class="header-menu fl">
-            <ul>
-                <li class="active"><a href="#">首页</a></li>
-                <li class=""><a href="#">二手商品</a></li>
-                <li class=""><a href="#">个人中心</a></li>
-                <li class=""><a href="#">发布商品</a></li>
-            </ul>
-        </div>
+
         <div class="header-search fr">
             <form method="get" action="" name="search">
                 <input class="input-search" id="HeaderSearchQuery" name="q" type="text" value="" placeholder="搜宝贝"
@@ -59,6 +53,15 @@
         </div>
     </div>
 </div>
+<div class="header-nav">
+    <ul class="header-menu cf">
+        <li class="active"><a href="#">首页</a></li>
+        <li class=""><a href="#">二手商品</a></li>
+        <li class=""><a href="#">个人中心</a></li>
+        <li class=""><a href="#">发布商品</a></li>
+    </ul>
+</div>
+<!-- #############################这里变了END#############################-->
 <div class="page">
     <div class="content">
         <div class="container form-wrap">
@@ -73,11 +76,46 @@
             </div>
             <form class="form-signin" id="loginForm" role="form" action="" method="post">
                 <h2 class="form-signin-heading">用户登录</h2>
-                <input type="text" name="username" class="form-control" placeholder="用户名" required autofocus>
-                <input type="password" name="password" class="form-control" placeholder="密码" required>
+                <div class="form-group">
+                    <label for="">用户名</label>
+                    <input type="text" name="username" class="form-control" placeholder="用户名" required autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="">密码</label>
+                    <input type="password" name="password" class="form-control" placeholder="密码" required>
+                </div>
                 <button class="btn btn-warning btn-lg btn-block" type="submit">立即登录</button>
+                <button class="btn btn-default btn-lg btn-block" data-toggle="modal" data-target="#findPwd">忘记密码</button>
             </form>
             <p class="signTip">还没有帐号？<a href="./signup.html">点击注册</a></p>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="findPwd" tabindex="-1" role="dialog" aria-labelledby="forgotPwd" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title" id="forgotPwd">忘记密码</h4>
+                        </div>
+                        <form method="post">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="">注册时填写的邮箱</label>
+                                    <input name="email" type="email" class="form-control" placeholder="填写邮箱地址">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button type="submit" class="btn btn-primary">确认提交</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
 
         </div> <!-- /container -->
     </div>
