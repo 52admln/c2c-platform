@@ -78,6 +78,7 @@
                 <li class=""><a href="person-info.html">个人信息</a></li>
                 <li class=""><a href="person.html">我的宝贝</a></li>
                 <li class=""><a href="person-sellout.html">已售出的</a></li>
+                <li class=""><a href="person-finished.html">已买到的</a></li>
                 <li class="selected"><a href="person-admin.html">管理中心</a></li>
             </ul>
         </div>
@@ -128,7 +129,7 @@
                                 <td>2015-11-11</td>
                                 <td><span class="label label-success">普通用户</span></td>
                                 <td>
-                                    <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
+                                    <button type="button" class="btn btn-warning btn-xs js-band">禁止用户</button>
                                     <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
                                     <button type="button" class="btn btn-success btn-xs disabled">审核</button>
                                     <button type="button" class="btn btn-primary btn-xs">设为管理员</button>
@@ -140,7 +141,7 @@
                                 <td>2015-11-11</td>
                                 <td><span class="label label-default">待审核</span></td>
                                 <td>
-                                    <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
+                                    <button type="button" class="btn btn-warning btn-xs js-band">禁止用户</button>
                                     <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
                                     <button type="button" class="btn btn-success btn-xs">审核</button>
                                     <button type="button" class="btn btn-primary btn-xs">设为管理员</button>
@@ -152,7 +153,7 @@
                                 <td>2015-11-11</td>
                                 <td><span class="label label-danger">管理员</span></td>
                                 <td>
-                                    <button type="button" class="btn btn-warning btn-xs js-band">封禁</button>
+                                    <button type="button" class="btn btn-warning btn-xs js-band">禁止用户</button>
                                     <button type="button" class="btn btn-danger btn-xs js-del">删除</button>
                                     <button type="button" class="btn btn-success btn-xs disabled">审核</button>
                                     <button type="button" class="btn btn-primary btn-xs disabled">设为管理员</button>
@@ -295,7 +296,8 @@
 
                                 <tbody id="list">
                                 <tr>
-                                    <td><input class="form-control input-sm" type="text" name="ids" id="id-1" placeholder="输入学号">
+                                    <td><input class="form-control input-sm" type="text" name="ids" id="id-1"
+                                               placeholder="输入学号">
                                     </td>
                                     <td><input class="form-control input-sm" type="text" name="names" id="name-1"
                                                placeholder="输入姓名">
@@ -309,6 +311,7 @@
                             <div class="filter">
                                 <button type="button" class="btn btn-primary " id="addNewItem">新增</button>
                                 <button type="submit" class="btn btn-success " id="submitItems">提交</button>
+                                <button type="button" class="btn btn-info"  data-toggle="modal" data-target="#uploadXls">批量导入</button>
                             </div>
                         </form>
                     </div>
@@ -316,7 +319,7 @@
 
             </div>
         </div>
-
+        <!--封禁用户-->
         <div class="modal fade" id="confirmBand">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -336,6 +339,7 @@
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
     </div>
+    <!--删除用户-->
     <div class="modal fade" id="confirmDel">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -354,6 +358,33 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+    <!-- 批量导入 -->
+    <div class="modal fade" id="uploadXls" tabindex="-1" role="dialog" aria-labelledby="xls" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="xls">批量导入</h4>
+                </div>
+                <form method="post">
+                    <div class="modal-body">
+                        <h4>导入注意事项：</h4>
+                        <p class="text-danger">Excel表格为2列，分别为学号、姓名。</p>
+                        <div class="form-group">
+                            <h4>选择文件</h4>
+                            <input type="file" accept="" name="upload" id="xlsUploader">
+                            <p class="help-block">请选择Excel格式文件上传,支持文件类型（xls）</p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="submit" class="btn btn-primary">确认提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
 
 

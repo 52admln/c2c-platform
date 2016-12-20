@@ -216,3 +216,17 @@ var validator = $("#addStudent").validate({
         })
     }
 });
+
+
+
+$("#xlsUploader").on('change', function (e) {
+    var name=e.target.value;
+    console.log(name);
+    var fileName = name.substring(name.lastIndexOf(".")+1).toLowerCase();
+    console.log(fileName);
+    if(fileName !="xls"){
+        alert("请选择Excel格式文件上传(xls)！");
+        e.target.value="";
+        return
+    }
+})

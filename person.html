@@ -78,6 +78,7 @@
                 <li class=""><a href="person-info.html">个人信息</a></li>
                 <li class="selected"><a href="person.html">我的宝贝</a></li>
                 <li class=""><a href="person-sellout.html">已售出的</a></li>
+                <li class=""><a href="person-finished.html">已买到的</a></li>
                 <li class=""><a href="person-admin.html">管理中心</a></li>
             </ul>
         </div>
@@ -138,12 +139,49 @@
                                         </p>
                                     </td>
                                     <td class="operation">
+                                        <!-- #############################这里变了#############################-->
                                         <a href="#" type="button" class="btn btn-warning btn-xs">删除宝贝</a>
-                                        <a href="#" type="button" class="btn btn-success btn-xs">完成交易</a>
+                                        <a href="#" type="button" class="btn btn-success btn-xs js-btn-message">查看留言</a>
+                                        <!-- #############################这里变了END#############################-->
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
+                            <!-- #############################这里变了#############################-->
+                            <div class="js-table-message" style="display: none;">
+                                    <table class="table table-striped text-center">
+                                        <h4 class="page-header text-center">此商品的买家留言</h4>
+                                        <thead>
+                                        <tr>
+                                            <th>卖家用户名</th>
+                                            <th>联系方式</th>
+                                            <th>留言内容</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>Mark</td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td><a href="#" type="button" class="btn btn-primary btn-xs">完成交易</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mark</td>
+                                            <td>Jacob</td>
+                                            <td>ThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThornton</td>
+                                            <td><a href="#" type="button" class="btn btn-primary btn-xs">完成交易</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mark</td>
+                                            <td>Larry</td>
+                                            <td>the Bird</td>
+                                            <td><a href="#" type="button" class="btn btn-primary btn-xs">完成交易</a></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <!-- #############################这里变了END#############################-->
                         </li>
                         <li class="selected">
                             <!-- #############################这里变了#############################-->
@@ -176,12 +214,49 @@
                                         </p>
                                     </td>
                                     <td class="operation">
+                                        <!-- #############################这里变了#############################-->
                                         <a href="#" type="button" class="btn btn-warning btn-xs">删除宝贝</a>
-                                        <a href="#" type="button" class="btn btn-success btn-xs">完成交易</a>
+                                        <a href="#" type="button" class="btn btn-success btn-xs js-btn-message">查看留言</a>
+                                        <!-- #############################这里变了END#############################-->
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
+                            <!-- #############################这里变了#############################-->
+                            <div class="js-table-message" style="display: none;">
+                                <table class="table table-striped text-center">
+                                    <h4 class="page-header text-center">此商品的买家留言</h4>
+                                    <thead>
+                                    <tr>
+                                        <th>卖家用户名</th>
+                                        <th>联系方式</th>
+                                        <th>留言内容</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td><a href="#" type="button" class="btn btn-primary btn-xs">完成交易</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td>Jacob</td>
+                                        <td>ThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThorntonThornton</td>
+                                        <td><a href="#" type="button" class="btn btn-primary btn-xs">完成交易</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mark</td>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td><a href="#" type="button" class="btn btn-primary btn-xs">完成交易</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- #############################这里变了END#############################-->
                         </li>
                     </ul>
                 </div>
@@ -214,5 +289,10 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(".js-btn-message").on("click", function (){
+        $(this).closest("table").closest("li").find(".js-table-message").fadeToggle("normal","linear");
+    })
+</script>
 </body>
 </html>

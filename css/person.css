@@ -179,6 +179,10 @@
     border-top: 1px solid #e6e6e6;
     text-align: center;
 }
+#resell-list .bd .js-table-message td {
+    max-width: 60px;
+    word-break: break-word;
+}
 
 #resell-list .bd td {
     padding-top: 10px;
@@ -248,4 +252,8 @@
 .filter {
     width:300px;
     margin:20px 0;
+}
+
+thead th {
+    text-align: center;
 }

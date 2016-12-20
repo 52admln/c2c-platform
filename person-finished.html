@@ -77,18 +77,18 @@
             <ul class="navigations">
                 <li class=""><a href="person-info.html">个人信息</a></li>
                 <li class=""><a href="person.html">我的宝贝</a></li>
-                <li class="selected"><a href="person-sellout.html">已售出的</a></li>
-                <li class=""><a href="person-finished.html">已买到的</a></li>
+                <li class=""><a href="person-sellout.html">已售出的</a></li>
+                <li class="selected"><a href="person-finished.html">已买到的</a></li>
                 <li class=""><a href="person-admin.html">管理中心</a></li>
             </ul>
         </div>
         <div class="main-content">
             <!--当里面没内容的时候,将class hidden去掉,在下面resell-list里加入hidden-->
-            <div class="empty-page no-orders">
+            <div class="empty-page no-orders hidden">
                 <p class="tips-title">亲,这里似乎什么东西都没有哦</p>
                 <a href="#" type="button" class="btn btn-success btn-block btn-publish">发布宝贝</a>
             </div>
-            <div id="resell-list" class="hidden">
+            <div id="resell-list" class="">
                 <!-- 列表头 -->
                 <div class="hd">
                     <table>
@@ -97,7 +97,7 @@
                             <th class="item-info">宝贝</th>
                             <th class="unit">原价（元）</th>
                             <th class="amount">数量</th>
-                            <th class="pay">卖价（元）</th>
+                            <th class="pay">成交价（元）</th>
                             <th class="operation">操作</th>
                         </tr>
                         </thead>
@@ -137,7 +137,7 @@
                                         </p>
                                     </td>
                                     <td class="operation">
-                                        <a href="#" type="button" class="btn btn-warning btn-block btn-delete">删除宝贝</a>
+                                        <a href="#" type="button" class="btn btn-info btn-block btn-delete">查看宝贝</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -172,7 +172,7 @@
                                         </p>
                                     </td>
                                     <td class="operation">
-                                        <a href="#" type="button" class="btn btn-warning btn-block btn-delete">删除宝贝</a>
+                                        <a href="#" type="button" class="btn btn-info btn-block btn-delete">查看宝贝</a>
                                     </td>
                                 </tr>
                                 </tbody>
