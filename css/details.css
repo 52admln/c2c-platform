@@ -355,11 +355,11 @@
 
 .message {
     width: 750px;
-    height: 80px;
+    height: auto;
     float: left;
     border: 1px solid #ddd;
     margin-left: 20px;
-
+    clear: both;
 }
 
 .tx {
@@ -373,9 +373,15 @@
 .message_1 {
     margin-top: 10px;
 }
+.message_2 {
+    max-width: 50em;
+    word-break: break-all;
+    margin-left: 100px;
+}
 
 .message_3 {
     color: #999;
+    margin-top: 10px;
 }
 
 .recover {
