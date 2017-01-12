@@ -354,6 +354,7 @@
 }
 
 .message {
+    position: relative;
     width: 750px;
     height: auto;
     float: left;
@@ -361,6 +362,11 @@
     margin-left: 20px;
     clear: both;
 }
+.message-btn {
+     position: absolute;
+     right:5px;
+     top:5px;
+ }
 
 .tx {
     width: 50px;

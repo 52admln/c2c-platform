@@ -157,11 +157,14 @@
                                 <img src="img/tx.jpg" alt="" class="tx">
                                 <ul>
                                     <li class="message_1">hyd回复@楼主：</li>
-                                    <li class="message_2">楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！</li>
+                                    <li class="message_2">
+                                        楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！楼主沙比！
+                                    </li>
                                     <li class="message_3">
                                         <p>2016-12-05 11:34</p>
                                     </li>
                                 </ul>
+                                <button type="button" class="btn btn-danger btn-xs message-btn">删除</button>
                             </div>
 
                         </div>
@@ -175,12 +178,12 @@
                         </div>
                     </div>
                     <div id="div3" class="cf" style="display:none">
-                        <h5>如遇到以下情况可能是诈骗行为：1.宝贝价格异常低；2.卖家要求QQ沟通；3.卖家要求直接汇款。</h5>
+                        <h5>如遇到以下情况可能是诈骗行为：1.宝贝价格异常低；2.卖家图片及描述不清；3.卖家要求直接汇款。</h5>
                         <div class="dsc_bt_in">
                             安全保障
                         </div>
                         <div class="dsc_zw">
-                            如遇诈骗请自认倒霉。本站概不负责。
+                            该平台仅限校园内交易,不涉及在线支付及网银转账,并有专人维护,保障安全。
                         </div>
                     </div>
                 </div>
@@ -202,36 +205,50 @@
                     <li>联系方式：<a href="#" target="_blank" class="talk">与他对话</a></li>
                     <li>交易方式：<a href="#" target="_blank" class="change">与他联系</a></li>
                     <li>
-                        <button type="button" class="btn btn-warning buy" data-toggle="modal" data-target="#contact">与他联系</button>
+                        <button type="button" class="btn btn-warning buy" data-toggle="modal" data-target="#contact">
+                            与他联系
+                        </button>
                     </li>
-                    <li><span class="tips">交易流程:</span><p>买家通过上方“与他联系”与卖家取得联系,并与卖家经过协商,最终卖家同意交易,即交易成功。</p></li>
+                    <li><span class="tips">交易流程:</span>
+                        <p>买家通过上方“与他联系”与卖家取得联系,并与卖家经过协商,最终卖家同意交易,即交易成功。</p></li>
 
                 </ul>
                 <!-- Modal -->
-                <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+                <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="contactLabel"
+                     aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                                <h4 class="modal-title" id="contactLabel">提交购买</h4>
+                                <button type="button" class="close" data-dismiss="modal"><span
+                                        aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                                <h4 class="modal-title" id="contactLabel">提交购买请求</h4>
                             </div>
                             <form method="post">
-                            <div class="modal-body">
+                                <div class="modal-body">
 
                                     <div class="form-group">
                                         <label for="">联系方式</label>
-                                        <input name="contact" type="text" class="form-control" placeholder="填写您的联系方式">
+                                        <input name="contact" type="tel" class="form-control"
+                                               placeholder="务必填写真实有效的手机号码">
+                                        <br>
+                                        <code>务必填写真实有效的手机号码</code>
                                     </div>
                                     <div class="form-group">
-                                        <label for="">留言</label>
-                                        <textarea name="message" class="form-control" cols="30" rows="10"></textarea>
-                                    </div>
+                                        <label for="">购买意向</label>
+                                        <textarea name="message" class="form-control" cols="30" rows="10" placeholder="填写格式请参照下方（包括成交价格,联系方式,交易地点,其他留言）"></textarea>
+                                        <br>
+                                        <code>1.成交价格:</code><br>
+                                        <code>2.联系方式:</code><br>
+                                        <code>3.交易地点:</code><br>
+                                        <code>4.其他留言</code><br>
 
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                <button type="submit" class="btn btn-primary">确认提交</button>
-                            </div>
+                                    </div>
+                                    <h5>用户提交购买需求后,可以主动与卖家联系,也可等待卖家与您联系协商。</h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                    <button type="submit" class="btn btn-primary">确认提交</button>
+                                </div>
                             </form>
                         </div>
                     </div>
