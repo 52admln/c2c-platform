@@ -255,6 +255,7 @@
     -moz-transition: opacity .2s;
     -o-transition: opacity .2s;
     transition: opacity .2s;
+    height: 150px;
 }
 .item-pic img:hover {
     opacity: .8;
